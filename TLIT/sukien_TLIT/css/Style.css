@@ -1,0 +1,244 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+html, body{
+    font-family: "Roboto", sans-serif;    
+    height: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+  
+  /* ////////////HEADER//////////// */
+  
+  .logo--img {
+    width: 70px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background-color: #293b5f;
+    position: relative;
+    justify-content: space-evenly;
+  }
+  .nav--link > li {
+    list-style-type: none;
+  }
+  li {
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  li a {
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 15px;
+    color: #fff;
+  }
+  .nav__ {
+    transition: color 0.4s;
+    transition: border-bottom 0.3s;
+    padding-bottom: 5px;
+  }
+  .nav__active {
+    border-bottom: 2px solid #c4d7b9;
+    color: #c4d7b9;
+    padding-bottom: 5px;
+  }
+  .nav__:hover {
+    border-bottom: 2px solid #c4d7b9;
+    color: #c4d7b9;
+  }
+  
+/*----------------header background-------------------------*/
+.navi--sukien {
+  color: white;
+  z-index: 5;
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  font-size: 20px;
+}
+.imgbg {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+.main--navi {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+.main--event {
+  margin-left: 40px;
+  font-weight: 600;
+  cursor: default;
+}
+.sukien--section__video{
+  position: relative;
+  height:200px;
+}
+/*--------------------------------------------event---------------------*/
+:root{
+  --blue:#293b5f;
+}
+
+.event-section {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 48px;
+  width: calc(100% - 300px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.event-section .event{
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  
+  
+}
+
+
+
+.event-section .event img{
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+.event-image{
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.event:hover .event-image img{
+  transform: scale(1.1);
+  
+  
+}
+
+.event-image .event-btn{
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  color: #000;
+}
+.event:hover .event-image .event-btn{
+  bottom: 0;
+}
+.event-image .event-btn a{
+  line-height: 45px;
+  background-color: rgba(0, 0, 0, .4);
+  display: block;
+  color: #fff;
+
+}
+
+
+.event .event-time{
+  margin: 30px 10px;
+  text-align: center;
+  
+}
+.event .event-time h2{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+.event .event-time .time{
+  opacity: 0.6;
+}
+.distance{
+  background-color:white;
+  height:100px;
+}
+/*--------------------------------------lienhe------------------*/
+.section {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  position: relative;
+}
+.video--bg--lienhe {
+  height: 100%;
+}
+video {
+  filter: brightness(99%);
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+.bg--lienhe__ {
+  height: 100%;
+}
+.section__body {
+  padding: 30px 0;
+  padding-top: 60px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section__body--text--head {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.section__body--icon {
+  margin-top: 30px;
+}
+.section__target--icon:hover {
+  background-color: #333;
+  color: white;
+}
+.section__target--icon:hover i {
+  transform: scale(1.4);
+}
+.section__target--icon i {
+  transition: all 0.4s;
+}
+.section__target--icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+  margin-left: 10px;
+  color: #ffffff;
+  background: rgba(167, 138, 9, 0.15);
+  padding: 13px 15px 13px 15px;
+  transition: all 0.4s;
+  line-height: 60px;
+}
+.section__body--text {
+  padding: 8px 0;
+}
+.section__body--information {
+  padding: 5px 0;
+  font-size: 16px;
+}
+.banquyen {
+  background-color: #000;
+  text-align: center;
+  padding: 4px 0;
+}
+.section--end--text {
+  color: rgba(255,255,255, 0.5);
+  cursor: default;
+}
+.team{
+    color: white;
+}

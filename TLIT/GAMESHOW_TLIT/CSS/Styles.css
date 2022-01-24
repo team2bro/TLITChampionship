@@ -1,0 +1,576 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+}
+body {
+  overflow-x: hidden;
+}
+/*-------------------------------header-----------------------------------------*/
+.logo--img {
+  width: 70px;
+}
+header {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  background-color: #293b5f;
+  position: relative;
+  justify-content: space-evenly;
+}
+li {
+  text-transform: uppercase;
+  display: inline-block;
+}
+li a {
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 15px;
+  color: #fff;
+}
+.nav__ {
+  transition: color 0.4s;
+  transition: border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+.nav__active {
+  border-bottom: 2px solid #c4d7b9;
+  color: #c4d7b9;
+  padding-bottom: 5px;
+}
+.nav__:hover,
+.nav__:active {
+  border-bottom: 2px solid #c4d7b9;
+  color: #c4d7b9;
+}
+/*-----------------------------main-=love-------------------------------*/
+.main--love{
+  height:100vh;
+}
+.videobg__love {
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.icon__cute__1 {
+  width: 100px;
+  position: absolute;
+  left: 275px;
+  z-index: 2;
+  top: 125px;
+  transition:all 0.3s;
+  transform: rotate(30deg);
+}
+.caythong{
+  width: 100px;
+  position: absolute;
+  left: 650px;
+  z-index: 2;
+  top: 191px;
+  transition:all 0.3s;
+  transform: rotate(30deg);
+}
+.icon__cute__2 {
+  width: 80px;
+  position: absolute;
+  top: 400px;
+  left: 270px;
+  visibility: hidden;
+  z-index: 100;
+}
+.picture--left {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.col--img--left {
+  position: relative;
+  height: 100vh;
+}
+.text {
+  color: #e61d8c;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  background: -webkit-linear-gradient(315deg, #e61d8c 10%, #c7e9fb 74%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 18px #888;
+}
+.header--main__text {
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  line-height: 100px;
+}
+.header--body__text {
+  font-size: 56px;
+  letter-spacing: 5px;
+}
+.btn{
+    height:0;
+}
+.btn__ {
+  font-size: 18px;
+  position: relative;
+  left: 100px;
+  top: 200px;
+  width: 200px;
+  height: 60px;
+  color: green;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: pink;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+ 
+}
+.btn--main--love {
+  float: left;
+  
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+.btn--main--love:nth-child(2){
+  margin-left:50px;
+}
+.btn--main--love:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7ee8fa;
+  background-image: linear-gradient(315deg, #7ee8fa 0%, #eec0c6 74%);
+  transition: all 0.4s ease;
+}
+.btn--main--love:hover {
+  background: transparent;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  color: green;
+}
+.btn--main--love:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+.btn--main--love:active{
+  top:185px;
+}
+/*---------------------------2048----------------------------------*/
+.game__2048{
+  height: 100vh;
+  position: relative;
+}
+.game__2048--bg{
+  position: absolute;
+  right: 100px;
+  top:40%;
+  transform:translateY(-50%);
+  width: 350px;
+}
+.game__2048--bg img{
+  width: 100%;
+}
+#pacman {
+  height:450px;
+  width:342px;
+  margin:20px auto;
+}
+#shim { 
+  position:absolute;
+  visibility:hidden;
+}
+.gamepacmanmodal{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+canvas{
+  width: 342px;
+  height: 426px;
+}
+.modal{
+  background-color:white;
+  position: relative;
+  color: #293b5f;
+  padding: 30px 60px;
+  border-radius: 20px;
+  animation: drop 0.5s ;
+}
+
+.btn--close{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.btn--close:hover{
+  opacity: 0.7;
+}
+.game__{
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text__pacman{ 
+  left: 0;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.btn__pacman{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.open{
+  display: flex !important ;
+}
+
+@keyframes drop{
+  from { 
+    opacity:0;
+    transform: translateY(-100px);
+  }
+}
+.section--end--text{
+  text-align: center;
+}
+.copyright{
+  background-color:black;
+  margin-top: 100px;
+  padding: 20px 0;
+  font-size:18px;
+}
+.icon__cute__1:hover{
+  transform: scale(1.05);
+}
+.icon__cute__1:active{
+  transform:scale(0.95);
+}
+.bot{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+}
+.bot--sister img{
+  cursor: pointer;
+  width: 200px;
+  
+}
+.bot--sister {
+  position: absolute;
+  top:-186%;
+  left:50%;
+  width:100%;
+  z-index: 10010;
+}
+.bot--sister__talk{
+  position: relative;
+  top:50%;
+  z-index: 1000;
+  left:50%;
+
+  transform: translate(-50%,-50%);
+  padding: 30px;
+  background-color: white;
+  color:#293b5f;
+  border-radius:10px;
+  width: 40%;
+}
+@keyframes typewriter{
+  from{width: 0;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(44) 0.5s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+.line-1{ 
+  border-right: 2px solid rgba(255,255,255,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.anim-typewriter:nth-child(3){
+  animation-delay:4s ;
+}
+.bot__help--speech{
+  position: absolute;
+  top: -20px;
+  width: 50%;
+  right:-170px;
+  color: #293b5f;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 200px;
+  animation: nhapnhay 3s infinite;
+  transform-origin: left bottom;
+}
+@keyframes nhapnhay{
+  from{
+    transform:scale(0)
+  }
+}
+.bot__help--speech::before{
+  width: 0;
+  height: 0;
+  margin: 10px 0 0 -25px;
+  position: absolute;
+  content: "";
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid white;
+  transform:rotate(80deg);
+  top:21px;
+  left:20px;
+}
+.setout4{
+  left:55% !important;
+  top:30% !important;
+}
+.set__{
+  animation: movebot 1s linear forwards;
+}
+@keyframes movebot {
+  100%{
+    transform: translate(-7%,50%);
+  }
+}
+.btn--bot{
+  position: relative;
+  left: 35%;
+  top:16%;
+}
+.btn__bot{
+  background-color: #293b5f;
+  color: #fff;
+  padding: 10px 20px;  
+  border: none;
+  cursor: pointer;
+  border-radius:10px;
+  box-shadow: 4px 4px 18px 0 black;
+  animation: goDrop 0.5s ease forwards;
+  animation-delay:8s;
+  opacity:0;
+}
+.btn__bot:nth-child(2){
+  animation-delay: 9s;
+}
+.btn__bot:nth-child(2){
+  margin-left: 15px;
+}
+.btn__bot:hover{
+  background-color: #7ee8fa;
+}
+@keyframes goDrop{
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+
+  }
+  70%{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+}
+@keyframes goDropClose{
+  0%{
+    opacity: 1;
+    z-index: 10000;
+
+  }
+  40%{
+    opacity: 1;
+    top:10%;
+    z-index: 10000;
+
+  }
+  100%{
+    opacity: 1;
+    top: 38%;
+    z-index: 10000;
+
+  }
+}
+@keyframes goDropCloseText{
+  0%{
+    opacity: 1;
+    top:30%;
+  }
+  40%{
+    opacity: 1;
+    top:28%;
+  }
+  100%{
+    opacity: 1;
+    top:60%;
+  }
+}
+.godropclose{
+  animation: goDropClose 0.8s ease; 
+}
+.godropclosetext{
+  animation: goDropCloseText 0.8s ease; 
+
+}
+.close__{
+  display: none;
+}
+.bot--2{
+  display: none;
+}
+.bot--3{
+  display: none;
+}
+.bot--4{
+  display: none;
+}
+.open__{
+  display: block;
+}
+.help__music{
+  z-index: 1000;
+  background-color:white;
+  border-radius:100px;
+}
+.help__btn{
+  z-index: 1000;
+}
+.bot--fix{
+  position: absolute;
+  z-index: 1000;
+  top: 120px;
+  cursor: pointer;
+  width:100px
+}
+.bot--fix img {
+  width: 80px;
+}
+.support{
+  position: relative;
+  box-shadow:5px 5px 18px #888;
+  background-color:white;
+  border-radius: 5px;
+  width: 200px;
+}
+/*----------------------------*/
+.modal--caythong{
+  background-color: #293b5f;
+  width: 50%;
+  height:70vh;
+  position: relative;
+  border-radius:15px;
+  box-shadow:7px 7px 18px #333;
+}
+.caythongin{
+  animation: caythong1 0.5s ease;
+
+}
+.caythongout{
+  animation: caythong2 0.5s ease ;
+}
+@keyframes caythong1{
+  from{
+    transform: scale(0);
+    transform-origin: center;
+  }
+  to{
+    transform: scale(1)
+  }
+}
+@keyframes caythong2{
+  from{
+    transform: scale(1);
+    transform-origin: center;
+  }
+  to{
+    transform: scale(0);
+  }
+}
+.modal--music{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color:#fff;
+}
+.music--header{
+  font-size: 25px;
+  text-align: center;
+  margin:20px 0 ;
+}
+.music--select select{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin:20px 0;
+}
+.song audio{
+  height:260px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top:0;
+}
+.help__caythong{
+  background-color: white;
+  border-radius:1000px; 
+  z-index: 1000;
+}

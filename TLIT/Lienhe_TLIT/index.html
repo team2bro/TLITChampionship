@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" ype="image/x-icon"  href="./css/img_video/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>TLIT-Liên hệ</title>
+</head>
+<body>
+    <div class="request--div">
+        <div class="request--tb">
+            <div class="request--tb__header">
+                <div class="request--tb--text">
+                    TLIT Thông báo 
+                    <i class="times fas fa-times"></i>
+                </div>
+                
+            </div>
+            <div class="request--tb__header">
+                Thông tin của bạn đã được gửi đi, xin cảm ơn chúc bạn ngày làm việc và học tập vui vẻ.
+            </div>
+        </div>
+    </div>
+    <header class="heading--main">
+        <div class="header__logo">
+            <img class="logo--img" src="./css/img_video/logo.png" alt="logo">
+        </div>
+        <div class="header__link">
+            <ul class="nav--link">
+                <li><a class="nav__ " href="../Web_TLIT/index.html">trang chủ</a></li>
+                <li><a class="nav__ " href="../GIOITHIEU_TLIT/index.html">giới thiệu</a></li>
+                <li><a class="nav__ " href="../sukien_TLIT/index.html">sự kiện</a></li>
+                <li><a class="nav__ " href="../GAMESHOW_TLIT/index.html">gameshow</a></li>
+                <li><a class="nav__active " href="#">liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="contact--section__video">
+        <div class="video--bg">
+            <video class="video--bg__source" autoplay loop muted>
+                <source src="./css/img_video/Futuristic information technology background .mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="navi--contact">
+            <a class="main--navi" href="../Web_TLIT/index.html">Trang chủ</a>
+            <span class="main--contact">Liên hệ</span>
+        </div>
+    </section>
+    <section class="contact--section__form">
+        <div class="form__text">
+            <span>Liên hệ với chúng tôi</span>
+        </div>
+        <div class="form__subtext" >
+            Trở thành thành viên tại TLIT ngay hôm nay! Điền vào mẫu dưới đây và chúng tôi sẽ liên lạc sớm nhất có thể.
+        </div>
+        <div class="form__ form--contact">
+            <div class="name-email">
+                <input class="form__name form" type="text" placeholder="Họ và tên">
+                <input class="form__email form" type="text" placeholder="Email">
+            </div>
+            <div class="call-add">
+                <input class="form__call form" type="text" placeholder="Số điện thoại">
+                <input class="form__add form" type="text" placeholder="Địa chỉ">
+            </div>
+            <div class="mess">
+                <textarea placeholder="Lời nhắn"></textarea>
+                <div class="spiner"></div>
+            </div>
+            <div class="form--btn" onclick="addRote()">
+                Gửi
+            </div>
+        </div>
+    </section>
+    <section class="map--section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2167.6803197088966!2d105.81468692764629!3d20.97590904002545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acef8ad5350f%3A0x89435a3528118ff5!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUaMSDbmcgTG9uZw!5e0!3m2!1svi!2s!4v1636818346836!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <section id="lienhe" class="section">
+        <div class="video--bg--lienhe"> 
+            <video autoplay loop muted class="bg--lienhe__">
+                <source src="./css/img_video/Comp_8.mp4"  > 
+            </video>
+        </div>
+        <div class="section__body">
+            <h2 class="section__body--text--head">Thông tin liên hệ</h2>
+            <h3 class="section__body--text">Tham gia tại câu lạc bộ  với chúng tôi mọi lúc</h3>
+            <p class="section__body--information">Địa chỉ: Nghiêm Xuân Yêm, Hà Nội</p>
+            <p class="section__body--information">Điện thoại: No information</p>
+            <p class="section__body--information">Email: tlit@thanglong.edu.vn</p>
+            <div class="section__body--icon">
+                <a href="https://www.facebook.com/CLB.TinHoc.TLU" class="section__target--icon"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ftlit.tlu%2F%3Ffbclid%3DIwAR0pt8awuALreyahoMwkxMw1ef5oC_-lOjiyVt_xQw3jsbiUPUD5qW5wlsw&h=AT2ta3azVF_ZodvzB5GYDnwg41Rn2Dj586TP44_lEwGRuU0Gq_iGanwQ36puY-6pKIp-secElm7eENSTKAx8tbojH5QD96KtRZx2DDizFeXYZvxYDxBTNFEN-xUmrNebMtvEKV4iaGdM4N0mE8EEcw" class="section__target--icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@_clb_tinhoc_tlit?_d=secCgYIASAHKAESMgowwvEEcshRpt2G6%2FJHC%2FvkswtyXIHzcdXi4DiEddFAjvvXZMSmbLpiHSR1Fcmb3zYsGgA%3D&_r=1&checksum=10aa0de96083381b7e2c23c47347da932d50eaadcb1d17e6b1b34b1b79c29e29&language=vi&sec_uid=MS4wLjABAAAAF36onVX2sRVF48gzmEWxfPDuDGiwxTcZIPv39GbdXBuiaKIyvoMdMvMWRVKaSLIG&sec_user_id=MS4wLjABAAAAeYuVwCxBxmx9Gh09Gf90iLCv5vdFSw7Erw4GHb0-Vo4nUfApNRHRLLZUNDWBsgNU&share_app_id=1180&share_author_id=6898765963358487553&share_link_id=FFFF7F26-BD21-4BF9-B572-3A2EFD5FD3AE&source=h5_t&tt_from=copy&u_code=cl27hecb0gb00i&user_id=6510870819844308993&utm_campaign=client_share&utm_medium=ios&utm_source=copy" class="section__target--icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/c/ThangLongInformationTechnologyCluba/videos" class="section__target--icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <footer class="banquyen">
+        <div class="section--end span-2-of-2" >
+            <p class="section--end--text">© Bản quyền thuộc về <span class="team">team2_brother</span>  Thiết kế website <span class="team">TLIT</span> </p>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
