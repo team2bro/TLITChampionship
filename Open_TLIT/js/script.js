@@ -1,4 +1,4 @@
-alert('Web hiện tại chưa dành cho điện thoại, bạn nên vào bằng máy tính')
+
 function goToPage(){
     location.href="https://www.facebook.com/CLB.TinHoc.TLU"
 }
