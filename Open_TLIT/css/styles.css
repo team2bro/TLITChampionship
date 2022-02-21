@@ -39,9 +39,7 @@ html{
 .heading--main__left{
     display: flex;
     align-items:center;
-    margin-left: 150px;
-    
-    
+    margin-left: 150px;  
 }
 .nav__1{
     opacity: 0;
@@ -205,6 +203,7 @@ html{
     top: 50%;
     left: 150px;
     transform: translateY(-50%);
+    margin-right: 150px;
 }
 .content__header{
     font-size: 56px;

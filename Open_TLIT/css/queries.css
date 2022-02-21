@@ -1,0 +1,71 @@
+@media only screen and (max-width:1300px){
+    .question--about{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .form--dangnhap {
+        padding: 25px 50px;
+    }
+    .form--dangnhap__picture img {
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 900px){
+    .heading--main__search{
+        display: none;
+    }
+    .content__header{
+        font-size: 42px;
+    }
+    .main--content__body{
+        font-size:16px;
+    }
+    .main--content__form{
+        font-size:16px;
+    }
+    .myvideobg__after {
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 850px){
+    .form--dangnhap{
+        position:fixed;
+        transform: translate(50%, 0);
+        border-radius: 20px;
+        z-index: 9999;
+    }
+    .nganh{
+        width:90%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .heading--main__left{
+        margin-left: 40px ;
+    }
+    .heading--main__right{
+        margin-right: 40px;
+    }
+    .content__header{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .main--content__body{
+        font-size:14px;
+    }
+    .main--content__form{
+        font-size:14px;
+    }
+    .main--content{
+        left: 80px;
+        margin-right: 80px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .form--dangnhap{
+        width:80%;
+        transform: translate(10%, 20%);
+        margin: 10px 10px;
+        padding: 20px 50px;
+    }
+}
