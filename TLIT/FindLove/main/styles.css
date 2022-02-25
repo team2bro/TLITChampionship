@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Roboto", sans-serif;
+    color: #41403E;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    overflow:hidden;
+}
+body{
+    background:#FFDEE3;
+}
+/*-------------------------------------------------- body css-------------------------------------------------- */
+.wrap{
+    position: relative;
+    left: 45%;
+    transform: translateX(-50%);
+    margin:50px 100px 50px 100px;
+    height:70vh;
+    justify-content:space-between;
+    display:flex;
+}
+h1{
+    color: #BB0000;
+    font-size: 68px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 60px;
+    text-align: center;
+}
+.waviy span {
+  font-family: 'Dancing Script', cursive;
+  position: relative;
+  display: inline-block;
+  color: #BB0000;
+  animation: waviy 1.25s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+
+.game{
+    overflow: hidden;
+    width:300px;
+    object-fit: cover;
+}
+.game img:first-child{
+    margin-bottom:30px;
+
+}
+.game img{
+    transition:all .5s ease;
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border:dashed 5px #41403E;
+    cursor: pointer;
+}
+.game img:hover{
+    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+    filter:brightness(80%);
+}
+
+.game__1 img{
+    width:300px;
+    height:200px;
+    object-fit: fill;
+}
+.game__2 img{
+    width:300px;
+    height:200px;
+    object-fit: cover;
+}
+.game__3 img{
+    height:200px;
+    width:300px;
+    object-fit: cover;
+}
+.game__4 img{
+    width:300px;
+    height:200px;
+    object-fit: cover;
+}
+/*---------------------animation--------*/
+.layout{
+    display:flex;
+    align-items: center;
+}
+.des{
+    margin-left:20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height:40px;
+    transform:translateY(-20px);
+}
+.name{
+    font-size: 24px;
+    font-weight: 600;
+}
+.des--game{
+    font-style: italic;
+}
+/*-----layout-----*/
+.layout__1:hover  .des--game__1{
+    display:unset; 
+}
+.layout__1:hover  .name--game1{
+    animation: moveRightToLeft 0.6s ease;
+}
+.layout__1:hover  .des--game1{
+    animation:moveRightToLeft 1.1s ease;
+}
+.layout__2:hover  .des--game__2{
+    display:unset; 
+}
+.layout__2:hover  .name--game2{
+    animation: moveRightToLeft 0.6s ease;
+}
+.layout__2:hover  .des--game2{
+    animation:moveRightToLeft 1.1s ease;
+}
+.layout__3:hover  .des--game__3{
+    display:unset; 
+}
+.layout__3:hover  .name--game3{
+    animation:  moveRightToLeft 0.6s ease;
+}
+.layout__3:hover  .des--game3{
+    animation: moveRightToLeft 1.1s ease;
+}
+.layout__4:hover  .des--game__4 {
+    display:unset; 
+}
+.layout__4:hover  .name--game4{
+    animation:  moveRightToLeft 0.6s ease;
+}
+.layout__4:hover  .des--game4{
+    animation: moveRightToLeft 1.1s ease;
+}
+/*--------keyframes----------------*/
+@keyframes moveRightToLeft{
+    0%{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
