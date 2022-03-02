@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+}
+body {
+    overflow-x: hidden;
+}
+/*---loadding---------*/
+#myProgress {
+    width: 200%;
+    background-color: white;
+    transform:translateX(-27%);
+    border:2px solid black;
+    border-radius:15px;
+}
+  
+#myBar {
+    width:10%;
+    border-radius:15px;
+    height: 30px;
+    background-color: black;
+    text-align: center;
+    line-height: 30px;
+    color:aqua;
+}
+/*--------------------------------------*/
+.loadding--layer{
+    background-color: #ACDFEA;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.fruits--loadding{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fruits{
+    background-position: left;
+    background-size: 500%;
+    height: 90px;
+    width: 90px;
+    border-radius:50% ;
+    
+    background-repeat: no-repeat; 
+    background-image: url(./img/loading.png);
+    animation: animate 2.5s steps(4) infinite ;
+    background-position: right;
+}
+.sun-effect{
+    position: absolute;
+}
+.sun{
+    animation:drop 0.6s;
+    width: 200px;
+    height: 200px;
+}
+.sun img{
+    width: 200px;
+    height: 200px;
+}
+.sun--vien{
+    animation: scaleSun 1.5s infinite;
+}
+.cloudys{
+    position: absolute;
+}
+.cloudy--1{
+    right: 0;
+    animation:drop 0.6s;
+
+}
+.cloudy--2{
+    top:60%;
+    animation:leftTo 0.6s;
+
+}
+.cloudy--3{
+    left:40%;
+    animation:drop 0.6s;
+}
+.cloudy--4{
+    animation:rightTo 0.8s;
+}
+.may{
+    z-index: 100;
+}
+.img-cute1{
+    bottom:0%;right:0;
+}
+.sun--active{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    animation:growSun 3s;
+}
+.endloading{
+    animation: opLoad 2s forwards;
+}
+.close{
+    display:none;
+}
+/*------------levelEASY------------*/
+
+.level--easy{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100vw;
+    height: 100vh;
+    background: url(./img/bg_1.png)  ;
+    background-position: center;
+    /* background-size: contain; */
+}
+
+
+/*--------------------------------------*/
+@keyframes animate {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+}
+@keyframes scaleSun {
+    0% {
+      transform:scale(1);
+    }
+    100% {
+        transform:scale(1.2);
+    }
+}
+@keyframes drop {
+    0%{
+        transform:translateY(-100px);
+    }
+}
+@keyframes leftTo {
+    0%{
+        transform:translateX(-100px);
+    }
+}
+@keyframes rightTo {
+    0%{
+        transform:translateX(100px);
+    }
+}
+@keyframes growSun{
+    0%{
+        transform:scale(1) rotate(0deg);
+
+    }
+    100%{
+        transform: scale(20) rotate(200deg);
+    }
+}
+@keyframes opLoad{
+    0%{
+        opacity:1;
+
+    }
+    100%{
+        opacity: 0;
+    }
+}

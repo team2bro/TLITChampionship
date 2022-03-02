@@ -137,7 +137,6 @@ li a {
   background: pink;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
@@ -145,7 +144,6 @@ li a {
 }
 .btn--main--love {
   float: left;
-  
   border: none;
   transition: all 0.3s ease;
   border-radius: 30px;
@@ -158,84 +156,27 @@ li a {
 .btn--main--love:nth-child(2){
   margin-left:50px;
 }
-.btn--main--love:after {
-  position: absolute;
-  content: " ";
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #7ee8fa;
-  background-image: linear-gradient(315deg, #7ee8fa 0%, #eec0c6 74%);
-  transition: all 0.4s ease;
-}
+
 .btn--main--love:hover {
-  background: transparent;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  background: #d8bbb2;
   color: green;
 }
-.btn--main--love:hover:after {
-  -webkit-transform: scale(2) rotate(180deg);
-  transform: scale(2) rotate(180deg);
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-}
+
 .btn--main--love:active{
   top:185px;
 }
-/*---------------------------2048----------------------------------*/
-.game__2048{
-  height: 100vh;
-  position: relative;
+.text{
+  margin-left:0;
 }
-.game__2048--bg{
-  position: absolute;
-  right: 100px;
-  top:40%;
-  transform:translateY(-50%);
-  width: 350px;
+.game{
+  margin-top:50px
 }
-.game__2048--bg img{
-  width: 100%;
+.img--game img{
+  transform: translateY(-30%);
+  width:30%;
+  float:right;
+  margin-right:100px;
 }
-#pacman {
-  height:450px;
-  width:342px;
-  margin:20px auto;
-}
-#shim { 
-  position:absolute;
-  visibility:hidden;
-}
-.gamepacmanmodal{
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-canvas{
-  width: 342px;
-  height: 426px;
-}
-.modal{
-  background-color:white;
-  position: relative;
-  color: #293b5f;
-  padding: 30px 60px;
-  border-radius: 20px;
-  animation: drop 0.5s ;
-}
-
 .btn--close{
   position: absolute;
   right: 20px;
@@ -246,24 +187,7 @@ canvas{
 .btn--close:hover{
   opacity: 0.7;
 }
-.game__{
-  width: 80%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.text__pacman{ 
-  left: 0;
-  text-align: center;
-  margin: 0;
-  position: relative;
-  width: 100%;
-}
-.btn__pacman{
-  left: 50%;
-  transform: translateX(-50%);
-}
 .open{
   display: flex !important ;
 }
@@ -517,11 +441,11 @@ canvas{
   box-shadow:7px 7px 18px #333;
 }
 .caythongin{
-  animation: caythong1 0.5s ease;
+  animation: caythong1 0.3s ease;
 
 }
 .caythongout{
-  animation: caythong2 0.5s ease ;
+  animation: caythong2 0.3s ease ;
 }
 @keyframes caythong1{
   from{

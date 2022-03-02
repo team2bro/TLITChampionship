@@ -52,15 +52,7 @@
 
     </div>
     
-    <div class="gamepacmanmodal">
-        <div class="modal">
-            <div id="shim">shim for font face</div>
-            <div class="btn--close close"><i class="fas fa-times"></i></div>
-            <h1>Pacman</h1>
-            <p>Hãy chơi hết 3 mạng thì thoát ra</p>
-            <div id="pacman"></div>
-          </div>        
-    </div>
+    
     <header class="heading--main">
         <div class="header__logo">
             <img onclick="returnPage()" class="logo--img" src="./CSS/IMG/logo.png" alt="logo">
@@ -90,10 +82,11 @@
     <audio class="music" >
         <source src="./CSS/IMG/Thế anh_mixdown.mp3" type="audio/mp3">
     </audio>
+    <video autoplay loop muted class="videobg__love">
+        <source src="./CSS/IMG/Hearts - 81890.mp4">
+    </video>
     <div class="main--love">
-        <video autoplay loop muted class="videobg__love">
-            <source src="./CSS/IMG/Hearts - 81890.mp4">
-        </video>
+       
         <img class="picture--left " src="./CSS/IMG/image_processing20201217-13100-11og928-removebg.png" alt="love1">
         <img class="icon__cute__1" src="./CSS/IMG/3159075.png" alt="love2">
         <img class="caythong icon__cute__1" src="./CSS/IMG/caythong.png" alt="love3">
@@ -103,14 +96,33 @@
         <div>
             <p class="text header--body__text">Đường tình duyên</p> 
         </div>
+       
         <div class="btn">
+            
             <div onclick="goToFindLove()" class="btn__ btn--main--love k1">
                 Go to LoveLine
             </div>
         </div>
-     </div>
+    </div>
+    <div class="main--love game">
+        <div>
+        <p style=" "class="text header--main__text">TLIT</p> 
+        </div>
+        <div>
+            <p class="text header--body__text">Fruit Game</p> 
+        </div>
+        
+        <div class="btn">
+            <div onclick="goToFruitGame()" class="btn__ btn--main--love k1">
+                Go to FruitGame
+            </div>
+        </div>
+        <div class="img--game">
+            <img src="./CSS/IMG/hoaqua.png" alt="gamehoaqua">
+        </div>
+    </div>
    <div class="copyright">
-        <p class="section--end--text">© Bản quyền thuộc về <span style="color:red;">Team2_Brother</span> Thiết kế website <span class="team">TLIT</span></p>
+        <p class="section--end--text">© Bản quyền thuộc về <span class="team">team2_brother</span>  Thiết kế website <span class="team">TLIT</span> </p>
    </div>
     <script src="./js/mouse.js"></script>
     <script src="./js/script.js"></script>

@@ -1,6 +1,9 @@
 function goToFindLove() {
   window.open('../FindLove/index.html', '_blank');
 }
+function goToFruitGame() {
+  window.open('../FruitGame/index.html', '_blank');
+}
 function goToChatChung() {
   window.open('https://chatchungtlit.herokuapp.com/', '_blank')
 }
@@ -114,29 +117,8 @@ function botSupported() {
   `
 }
 
-var el = document.getElementById("pacman");
 
-function go2048() {
-  window.open('https://play2048.co/', '_blank');
-}
-var btnPacman = document.querySelector('.btn__pacman')
-var closePacMan = document.querySelector('.close')
 
-btnPacman.addEventListener('click', () => {
-  if (!document.querySelector('.gamepacmanmodal').classList.contains('kiemtra')) {
-    document.querySelector('.gamepacmanmodal').classList.add('kiemtra')
-    if (Modernizr.canvas && Modernizr.localstorage) {
-      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
-    } else {
-      el.innerHTML = "Sorry, needs a decent browser<br /><small>" +
-        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-    }
-  }
-  document.querySelector('.gamepacmanmodal').classList.add('open')
-})
-closePacMan.addEventListener('click', () => {
-  document.querySelector('.gamepacmanmodal').classList.remove('open')
-})
 var playMusic = document.querySelector('.icon__cute__1')
 var music = document.querySelector('.music')
 playMusic.addEventListener('click', () => {
@@ -287,5 +269,5 @@ function closeMusic() {
   document.querySelector('.modal--caythong').classList.add('caythongout')
   setTimeout(function () {
     document.querySelector('.modal--music').classList.remove('open')
-  }, 500)
+  }, 300)
 }
