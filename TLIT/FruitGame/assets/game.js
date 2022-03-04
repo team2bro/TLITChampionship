@@ -11,7 +11,16 @@ var dataSecond=0;
 var minute=document.querySelector(".your--minutes")
 var dataMinute=0;
 var where=0;
-
+//help for-=---------------------------------------------------
+function helpBtn(){
+    var gameStart = document.querySelector(".game--start__open")
+    var helpLevel = document.querySelector(".help--level__close")
+    gameStart.classList.toggle("close")
+    helpLevel.classList.toggle("game--level__open")
+}
+document.querySelector(".help .header--goback").addEventListener("click",()=>{
+helpBtn();
+})
 
 function play() {
     var gameStart = document.querySelector(".game--start__open")
@@ -47,7 +56,7 @@ function nextLevel2() {
     document.querySelector(".level--2").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--1 input").value
     check(dataAnswer, "BANANAS", "BANANA")
-    dataLevel++
+    dataLevel=2
     dataCheckLevel(where)
 }
 function nextLevel3() {
@@ -56,7 +65,7 @@ function nextLevel3() {
     document.querySelector(".level--3").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--2 input").value
     check(dataAnswer, "ORANGES", "ORANGE")
-    dataLevel++
+    dataLevel=3
     dataCheckLevel(where)
 }
 function nextLevel4() {
@@ -65,7 +74,7 @@ function nextLevel4() {
     document.querySelector(".level--4").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--3 input").value
     check(dataAnswer, "STRAWBERRYS", "STRAWBERRY")
-    dataLevel++
+    dataLevel=4
     dataCheckLevel(where)
     dataCheckCardFlip(where)
     dataCheckCardScore(where)
@@ -169,10 +178,18 @@ function checkWin(){
     }
     if (k==18){
         setTimeout(function(){
-            alert("End game! congratulations")
+            document.querySelector(".firework").classList.remove("firework--")
+            document.querySelector(".diem").innerHTML=dataScore;
+            if (dataMinute==0){
+                document.querySelector(".tg").innerHTML=dataSecond +" Giây"
+            }
+            else
+            document.querySelector(".tg").innerHTML=dataMinute+" Phút "+ dataSecond +" Giây"
+            document.querySelector(".lat").innerHTML=dataFlip +" Lần"
         },1000)
     }
 }
+
 function updateSeconds(){
     if (dataSecond<10){
         second.innerHTML ="0" +dataSecond

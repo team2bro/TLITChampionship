@@ -35,3 +35,35 @@ function opa(){
     
 }
 //game
+document.querySelector(".level--start .header--home").addEventListener("click",()=>{
+  location.href=".././FruitGame/index.html";
+})
+document.querySelector(".level--2 .header--home").addEventListener("click",()=>{
+  location.href=".././FruitGame/index.html";
+})
+document.querySelector(".level--3 .header--home").addEventListener("click",()=>{
+  location.href=".././FruitGame/index.html";
+})
+document.querySelector(".level--4 .header--home").addEventListener("click",()=>{
+  location.href=".././FruitGame/index.html";
+})
+document.querySelector(".level--start .header--goback").addEventListener("click", ()=>{
+  location.href=".././GAMESHOW_TLIT/index.html";
+})
+// go back button
+document.querySelector(".level--1 .header--goback").addEventListener("click",()=>{
+  document.querySelector(".level--main").classList.remove("close")
+  document.querySelector(".game--level__close").classList.toggle("game--level__open")
+})
+document.querySelector(".level--2 .header--goback").addEventListener("click",()=>{
+  document.querySelector(".level--1").classList.remove("close")
+  document.querySelector(".level--2").classList.toggle("game--next__close")
+})
+document.querySelector(".level--3 .header--goback").addEventListener("click",()=>{
+  document.querySelector(".level--2").classList.remove("close")
+  document.querySelector(".level--3").classList.toggle("game--next__close")
+})
+document.querySelector(".level--4 .header--goback").addEventListener("click",()=>{
+  document.querySelector(".level--3").classList.remove("close")
+  document.querySelector(".level--4").classList.toggle("game--next__close")
+})

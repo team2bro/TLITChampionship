@@ -11,12 +11,12 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/styles.css">
-
+    <link rel="stylesheet" href="./assets/firework.css">
     <title>FruitGame</title>
 </head>
 
 <body>
-    <div class="loadding--layer ">
+    <div class="loadding--layer">
         <div class="fruits--loadding">
             <div class="fruits">
             </div>
@@ -49,15 +49,18 @@
 
     <!-- -----------------------------------------game----------------------- -->
 
-    <div class="game--start">
+    <div class="game--start ">
         <div class="congrat">
 
         </div>
-        <section class="start game--start__open">
-            <div class="level level--start">
+        <section class="start level--main game--start__open ">
+            <div class="level level--start ">
                 <div class="display--game start--header">
                     <div class="start header--goback">
                         <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
                     </div>
                     <div class="display--game header--name">
                         <img src="./assets/img/fruit.png" alt="">
@@ -69,7 +72,7 @@
                         <button onclick="play()" class="btn">Chơi</button>
                     </div>
                     <div class="game--setting">
-                        <button class="btn"><i class="fa-solid fa-circle-info"></i> Hướng dẫn</button>
+                        <button onclick="helpBtn()" class="btn"><i class="fa-solid fa-circle-info"></i> Hướng dẫn</button>
                     </div>
                 </div>
                 <div class="note">
@@ -77,6 +80,34 @@
                     <p><strong>Lưu ý: </strong> Đây là tựa game vui vẻ dành cho trẻ nên các bạn lớn không toxic.</p>
                 </div>
             </div>
+        </section>
+        <section class="start help help--level__close">
+            <div class="level level--0 ">
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="game--play__active animation help--user">
+                        <div style="margin-bottom:15px">
+                            # Từ level 1 đến level 3 là mức <strong>easy</strong> bạn chỉ cần trả lời tên hoa quả mà hình xuất hiện bên trái bằng tiếng anh.
+                        </div>
+                        <div style="margin-bottom:15px">
+                            # Từ level 4 đến level 5 là mức <strong>medium</strong> bạn chỉ cần lật các hoa quả giống nhau đây là một trò chơi trí nhớ. <br>
+                            <p>&nbsp &nbsp</p>Level 5 chúng tôi đang phát triển xin lỗi vì sự bất tiện này
+                        </div>
+                        <div style="margin-bottom:15px">
+                            <strong>Lưu ý: </strong> Trò ở mức <strong>medium</strong> bạn đợi 2 thẻ bài sai úp xuống thì bạn mới lật bài khác tránh trường hợp phát sinh lỗi không đáng có.
+                        </div>
+                    </div>
+                </div>
         </section>
         <section class="start level--easy game--level__close">
 
@@ -86,6 +117,9 @@
                 <div class="display--game start--header">
                     <div class="start header--goback">
                         <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
                     </div>
                     <div class="display--game header--name">
                         <img src="./assets/img/fruit.png" alt="">
@@ -122,6 +156,9 @@
                     <div class="start header--goback">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </div>
                     <div class="display--game header--name">
                         <img src="./assets/img/fruit.png" alt="">
                         <h2>FRUIT GAME</h2>
@@ -157,6 +194,9 @@
                     <div class="start header--goback">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </div>
                     <div class="display--game header--name">
                         <img src="./assets/img/fruit.png" alt="">
                         <h2>FRUIT GAME</h2>
@@ -189,6 +229,9 @@
                 <div class="display--game start--header">
                     <div class="start header--goback">
                         <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div  class="start header--goback header--home">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
                     </div>
                     <div class="display--game header--name">
                         <img src="./assets/img/fruit.png" alt="">
@@ -472,9 +515,42 @@
                     </div>
                 </div>
             </div>
+           
         </section>
+       
     </div>
+    <section  class="firework firework--">
+        <div class="firework-1"></div>
+        <div class="firework-2"></div>
+        <div class="firework-3"></div>
+        <div class="firework-4"></div>
+        <div class="firework-5"></div>
+        <div class="firework-6"></div>
+        <div class="firework-7"></div>
+        <div class="firework-8"></div>
+        <div class="firework-9"></div>
+        <div class="firework-10"></div>
+        <div class="firework-11"></div>
+        <div class="firework-12"></div>
+        <div class="firework-13"></div>
+        <div class="firework-14"></div>
+        <div class="firework-15"></div>
+        <div class="title">Congratulations 🎉</div>
+        <div class="description">
+            <div class="diemso">
+                <strong>-Điểm: </strong><span class="diem"></span>
+            </div>
+            <div class="thoigian">
+                <strong>-Đã hoàn thành medium trong: </strong>
+                <span class="tg"></span>
+                <br>
+                <strong>-Số lần lật thẻ:</strong>
+                <span class="lat"></span>
 
+            </div>
+        </div>
+        <div class="last--mess">#Hãy chụp lại và khoe với bạn bè của mình nào</div>
+    </section>
     <script src="./assets/scripts.js"></script>
     <script src="./assets/gameCard.js"></script>
     <script src="./assets/game.js"></script>

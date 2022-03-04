@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 :root{
     --color--bg__btn:#E4E6EB;
 }
@@ -101,8 +102,8 @@ body {
     bottom:0%;right:0;
 }
 .sun--active{
-    top:50%;
-    left:50%;
+    top:40%;
+    left:40%;
     transform: translate(-50%,-50%);
     z-index: 1000;
     animation:growSun 3s;
@@ -157,7 +158,9 @@ button{
 }
 .header--goback:hover{
     background-color: rgb(173, 120, 120);
- 
+}
+.header--home{
+    margin-left:10px;
 }
 .header--goback:hover i{
     color:rgb(223, 206, 206);
@@ -211,7 +214,10 @@ button{
     justify-content:space-around;
     position: relative;
 }
-
+.help--user{
+    flex-direction: column !important;
+     justify-content:space-around;
+}
 .img--game img{
     object-fit: cover;
     width:250px;
@@ -289,6 +295,9 @@ button{
 .game--level__close{
     display:none;
 }
+.help--level__close{
+    display:none;
+}
 .game--next__close{
     display:none;
 }
@@ -357,6 +366,7 @@ button{
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
 /*--------------------------------------*/
 @keyframes animate {
     0% {
