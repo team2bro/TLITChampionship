@@ -1,3 +1,6 @@
+:root{
+    --color--bg__btn:#E4E6EB;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,7 @@
 }
 html {
     font-family: "Roboto", sans-serif;
-    color: #fff;
+    color: black;
     text-rendering: optimizeLegibility;
     font-size: 16px;
 }
@@ -108,22 +111,252 @@ body {
     animation: opLoad 2s forwards;
 }
 .close{
-    display:none;
+    display:none !important;
+}
+button{
+    background:transparent;
+    outline:none;
+    border:none;
+    cursor: pointer;
 }
 /*------------levelEASY------------*/
-
-.level--easy{
+.game--start{
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: url(./img/bg_1.png)  ;
+    background-position: center;
+    position: relative;
+}
+.start{
     display:flex;
     justify-content:center;
     align-items:center;
     width: 100vw;
     height: 100vh;
-    background: url(./img/bg_1.png)  ;
-    background-position: center;
-    /* background-size: contain; */
+}
+.header--name img{
+    width:80px;
+    margin-right: 50px;
+}
+.header--name h2{
+    letter-spacing: 2px;
+    margin-right: 50px;
+    font-size: 40px;
+}
+.header--name{
+    margin: 0 auto;
+}
+.header--goback{
+    background-color: var(--color--bg__btn);
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+.header--goback:hover{
+    background-color: rgb(173, 120, 120);
+ 
+}
+.header--goback:hover i{
+    color:rgb(223, 206, 206);
+}
+.header--goback i{
+    font-size:30px;
+    color:rgb(43, 43, 43);
+    transform: rotate(180deg);
+}
+.level{
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    border-radius:20px;
+    padding:30px 30px ;
+
+}
+.level--start{
+    position: relative;
+}
+.display--game{
+    display:flex;
+    align-items:center;
+}
+.btn{
+    padding:20px 40px;
+    border-radius:20px;
+    border:5px solid black;
+    font-size:25px;
+    font-weight:bold;
+}
+.game--bar{
+    margin-top:100px;
+    justify-content:space-around;
+    align-items: center;
+    display:flex;
+}
+.btn:hover{
+    background-color:var(--color--bg__btn);
+}
+.note{
+    width:93%;
+    height:20px;
+    position:absolute;
+    bottom:5%;
+}
+.game--play__active{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    position: relative;
 }
 
+.img--game img{
+    object-fit: cover;
+    width:250px;
+}
+.answer--header{
+    margin-bottom: 40px;
+    font-weight:bold;
+    font-size:30px;
+}
+.congrat{
+    position: absolute;
+    top:0%;
+    left:5%;
+    z-index: 1000;
+    transform-origin: center -200px;
+    animation: swing ease-in-out 0.3s infinite alternate;
+}
+.tb2{
+    width: 250px;
+}
+.answer--form input{
+    padding:10px 15px;
+    outline:none;
+    height:40px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.btn--sub{
+    margin-left: 10px;
+    background-color:#00AA00;
+    padding:12px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.btn--sub:hover{
+    background-color:#006600;
+    color:white;
+}
+.level--game{
+    position:absolute;
+    top:5%;
+    margin-left: 10px;
+}
+.fruitL{
+    left:39%;
+}
+.fruitS{
+    left: 55%;
+}
+.flip{
+    left:39%;
+    top:90% !important;
+}
+.time{
+    left:55%;
+    top:90% !important;
+}
+.score{
+    position:absolute;
+    top:5%;
+}
+.setting{
+    position:absolute;
+    top:5%;
+    right:10%;
+    font-size:30px;
+    cursor: pointer;
+    transform-origin: center;
+}
+.setting:hover{
+    animation:rotate 1s;
 
+}
+.game--level__close{
+    display:none;
+}
+.game--next__close{
+    display:none;
+}
+.game--level__open{
+    display:flex !important;
+}
+.animation{
+    animation: rightToLeft 0.75s;
+}
+.g4{
+    height:350px;
+    background-color:#f1f15d;
+}
+/*------------------------------card----------------------------------*/
+.flip-card {
+    background-color: transparent;
+    width: 70px;
+    cursor: pointer;
+    height: 70px;
+    perspective: 1000px;
+}
+  
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.act{
+  transform: rotateY(180deg);
+}
+.actimp{
+    transform: rotateY(180deg);
+}
+.active--card{
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #cc9966;
+  border:3px solid black;
+}
+
+.flip-card-back {
+  border:3px solid black;
+  background-color: white;
+  transform: rotateY(180deg);
+}
+.game--card{
+    display: flex;
+}
+.flip-card{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
 /*--------------------------------------*/
 @keyframes animate {
     0% {
@@ -172,5 +405,27 @@ body {
     }
     100%{
         opacity: 0;
+    }
+}
+@keyframes  rightToLeft {
+    0%{
+        opacity: 0;
+        transform:translateX(100%);
+    }
+}
+@keyframes  rotate {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes swing {
+    0% { 
+        transform: rotate(3deg) ;
+     }
+    100% { 
+        transform: rotate(-3deg); 
     }
 }

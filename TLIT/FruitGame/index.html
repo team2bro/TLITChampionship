@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" ype="image/x-icon"  href="./assets/img/favicon.png">
+    <link rel="icon" ype="image/x-icon" href="./assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/styles.css">
+
     <title>FruitGame</title>
 </head>
+
 <body>
     <div class="loadding--layer ">
         <div class="fruits--loadding">
@@ -31,29 +36,449 @@
             <img class="may" src="./assets/img/cloud1.png" alt="">
         </div>
         <div class="cloudys cloudy--2">
-            <img class="may" src="./assets/img/cloud1.png" alt=""/>
+            <img class="may" src="./assets/img/cloud1.png" alt="" />
 
         </div>
         <div class="may cloudys cloudy--3">
             <img class="may" src="./assets/img/cloud1.png" alt="">
         </div>
         <div styles="" class="cloudys img-cute1 cloudy--4">
-            <img  src="https://i.pinimg.com/originals/28/a7/9c/28a79c0ae2405683bb6fbc5d6e995c60.gif" alt="">
+            <img src="https://i.pinimg.com/originals/28/a7/9c/28a79c0ae2405683bb6fbc5d6e995c60.gif" alt="">
         </div>
     </div>
+
+    <!-- -----------------------------------------game----------------------- -->
+
     <div class="game--start">
-        <section class="start">
+        <div class="congrat">
+
+        </div>
+        <section class="start game--start__open">
             <div class="level level--start">
-                
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="game--bar">
+                    <div class="game--play">
+                        <button onclick="play()" class="btn">Chơi</button>
+                    </div>
+                    <div class="game--setting">
+                        <button class="btn"><i class="fa-solid fa-circle-info"></i> Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="note">
+                    <hr style="width:100%;margin-bottom:5px;" />
+                    <p><strong>Lưu ý: </strong> Đây là tựa game vui vẻ dành cho trẻ nên các bạn lớn không toxic.</p>
+                </div>
             </div>
         </section>
-        <section class="level--easy">
-            <div class="level level--1">
+        <section class="start level--easy game--level__close">
 
+            <!-- ----------------------------level 1---------------------------- -->
+
+            <div class="level level--1 ">
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="game--play__active animation">
+                    <div class="img--game">
+                        <div class="level--game">
+                            <strong>Level: </strong><span class="your--level"></span>
+                        </div>
+                        <img src="./assets/img/bananas.png" alt="game1">
+                    </div>
+                    <div class="answer--game">
+                        <div class="answer--header">
+                            Answer
+                        </div>
+                        <i class=" setting fa-solid fa-gear"></i>
+                        <div class="score">
+                            <strong>Score: </strong><span class="your--score"></span>
+                        </div>
+                        <div class="answer--form">
+                            <input type="text" placeholder="Mời bạn nhập câu trả lời...">
+                            <button class="btn--sub">Submit!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -----------------------------level 2---------------------------- -->
+
+            <div class="level level--2 game--next__close">
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="game--play__active animation">
+                    <div class="img--game">
+                        <div class="level--game">
+                            <strong>Level: </strong><span class="your--level"></span>
+                        </div>
+                        <img src="./assets/img/oranges.png" alt="game1">
+                    </div>
+                    <div class="answer--game">
+                        <div class="answer--header">
+                            Answer
+                        </div>
+                        <i class=" setting fa-solid fa-gear"></i>
+                        <div class="score">
+                            <strong>Score: </strong><span class="your--score"></span>
+                        </div>
+                        <div class="answer--form">
+                            <input type="text" placeholder="Mời bạn nhập câu trả lời...">
+                            <button class="btn--sub">Submit!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------level--3-----------------------------  -->
+
+            <div class="level level--3 game--next__close">
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="game--play__active animation">
+                    <div class="img--game">
+                        <div class="level--game">
+                            <strong>Level: </strong><span class="your--level"></span>
+                        </div>
+                        <img src="./assets/img/strawberry.jpg" alt="game1">
+                    </div>
+                    <div class="answer--game">
+                        <div class="answer--header">
+                            Answer
+                        </div>
+                        <i class=" setting fa-solid fa-gear"></i>
+                        <div class="score">
+                            <strong>Score: </strong><span class="your--score"></span>
+                        </div>
+                        <div class="answer--form">
+                            <input type="text" placeholder="Mời bạn nhập câu trả lời...">
+                            <button class="btn--sub">Submit!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -----------------------------game--4--------------------- -->
+            <div class="level level--4 game--next__close">
+                <div class="display--game start--header">
+                    <div class="start header--goback">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                    <div class="display--game header--name">
+                        <img src="./assets/img/fruit.png" alt="">
+                        <h2>FRUIT GAME</h2>
+                    </div>
+                </div>
+                <div class="g4 game--play__active animation">
+                    <div class="level--game fruitL">
+                        <strong>Level: </strong><span class="your--level"></span>
+                    </div>
+                    <div class="level--game score fruitS ">
+                        <strong>Score: </strong><span class="your--score"></span>
+                    </div>
+                    <div class="level--game flip ">
+                        <strong>Flips: </strong><span class="your--flip"></span>
+                    </div>
+                    <div class="level--game time ">
+                        <strong>Times: </strong><span class="your--minutes"></span> : <span class="your--seconds"></span>
+                    </div>
+                    <div class="game--main">
+                        <div class="game--card">
+                            <table>
+                                    <th>
+                                        <div onclick="latThe(0)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png"  alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/sapodilla.png" alt="sapodilla"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(1)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png"  alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/bananas.png" alt="banana"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(2)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png"  alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/oranges.png" alt="orange"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(3)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png"  alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/strawberry.jpg" alt="strawberry"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(4)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/strawberry.jpg" alt="strawberry"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(5)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/sapodilla.png" alt="sapodilla"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                <tr>
+                                    <th>
+                                        <div onclick="latThe(6)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/bananas.png" alt="banana"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(7)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/oranges.png" alt="orange"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(8)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/durians.jpg" alt="durian"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(9)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/guava.png" alt="guava"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(10)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/mango.png" alt="mango"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(11)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/apple.png" alt="apple"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div onclick="latThe(12)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/apple.png" alt="apple"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(13)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/guava.png" alt="guava"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(14)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/mango.png" alt="mango"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(15)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/grapefruit.png" alt="grapefruit"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(16)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/durians.jpg" alt="durian"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div onclick="latThe(17)" class="flip-card">
+                                            <div class="flip-card-inner none">
+                                                <div class="flip-card-front">
+                                                    <img src="./assets/img/fruit.png" alt="card"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <img src="./assets/img/grapefruit.png" alt="grapefruit"
+                                                        style="width:60px;height:60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
-    
+
     <script src="./assets/scripts.js"></script>
+    <script src="./assets/gameCard.js"></script>
+    <script src="./assets/game.js"></script>
+
 </body>
+
 </html>

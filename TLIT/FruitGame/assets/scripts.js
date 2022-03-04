@@ -1,6 +1,6 @@
+
 var i = 0;
 var loading  = document.querySelector(".loadding--layer");
-
 move()
 function move() {
   if (i == 0) {
@@ -34,3 +34,4 @@ function opa(){
     },2000);
     
 }
+//game
