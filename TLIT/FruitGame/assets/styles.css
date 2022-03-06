@@ -156,6 +156,13 @@ button{
     cursor: pointer;
     transition:all 0.5s;
 }
+.note {
+    margin-bottom:10px;
+}
+.fruit--inner{
+    width: 60px;
+    height: 60px;
+}
 .header--goback:hover{
     background-color: rgb(173, 120, 120);
 }
@@ -308,7 +315,7 @@ button{
     animation: rightToLeft 0.75s;
 }
 .g4{
-    height:350px;
+    height:80%;
     background-color:#f1f15d;
 }
 /*------------------------------card----------------------------------*/
