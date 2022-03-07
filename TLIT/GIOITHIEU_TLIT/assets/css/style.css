@@ -118,7 +118,7 @@ li a {
   position: relative;
   margin: 0;
   padding: 70px 20px 30px 50px;
-  width: 100%;
+  width: 49.2%;
 }
 .img__ {
   width: 90%;
@@ -127,6 +127,7 @@ li a {
 .section1__text {
   padding: 70px 50px 30px 20px;
   line-height: 1.6;
+  width: 49.2%;
 }
 
 .section1__title {
@@ -156,12 +157,13 @@ li a {
   position: relative;
   margin: 0;
   padding: 70px 50px 30px 20px;
-  width: 100%;
+  width: 49.2%;
 }
 
 .section2__text {
   padding: 70px 20px 30px 50px;
   line-height: 1.6;
+  width: 49.2%;
 }
 
 .section2__title {
@@ -233,6 +235,10 @@ li a {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.ban__leader--info{
+  width: 23.8%;
+}
+
 .ban__leader--img {
   border-radius: 50%;
   width: 100%;
@@ -277,8 +283,7 @@ li a {
 .bg--lienhe__ {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  filter: brightness(40%);
+  object-fit: fill;
 }
 .section__body {
   padding: 30px 0;
@@ -336,4 +341,129 @@ li a {
 
 .team {
   color: white;
+}
+
+
+
+/*-------------------RESPONSIVE------------------*/
+.nav__bar--btn{
+  width: 30px;
+  height: 30px;
+  color:#fff;
+  display: none;
+  margin-right: 30px;
+}
+
+.RESPONSIVE--header__link{
+  display: none;
+}
+
+.nav__overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.RESPONSIVE--header__link{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 320px;
+  max-width: 100%;
+  background-color: #fff;
+
+}
+.RESPONSIVE--nav--link{
+  margin-top: 30px;
+
+}
+.RESPONSIVE--nav__{
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 0;
+  font-size: 1.4rem;
+
+
+}
+
+/*---MOBIE---*/
+@media only screen and (max-width: 46.1875em){
+  .title{
+    width: 100%;
+
+  }
+
+  .section1{
+    flex-direction: column;
+  }
+  
+  .section1__title{
+    text-align: center;
+  }
+  .section1__text {
+    padding-top: 0px;
+  }
+
+  .section2{
+    flex-direction: column-reverse;
+  }
+
+  .section2__text {
+    padding-top: 0px;
+  }
+
+  .img__{
+    display: none;
+  }
+
+  .band__leader--body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+
+}
+
+/*---TABLE---*/
+@media only screen and (min-width: 46.1875em) and (max-width: 63.9375em){
+
+}
+
+/*---TABLE and MOBIE---*/
+@media only screen and (max-width: 63.9375em){
+  .nav__bar--btn{
+    display: block;
+  }
+
+  .heading--main{
+    justify-content:space-between;
+  }
+
+  .header__logo{
+    margin-left: 20px;
+  }
+
+  .header__link{
+    display: none;
+  }
+
+
+
+  .section1__text{
+    width: 100%;
+  }
+  .section2__text{
+    width: 100%;
+  }
+  .ban__leader--info{
+    width: 100%;
+  }
 }
