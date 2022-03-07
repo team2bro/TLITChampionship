@@ -582,3 +582,76 @@ li a {
   position: absolute;
 }
 
+/*---MOBIE---*/
+@media only screen and (max-width: 46.1875em){
+  .content--taget{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .picture{
+    height: 300px;
+  }
+  .introduce__{
+    font-size: 15px;
+  }
+  .introduce--btn{
+    padding: 10px 35px;
+  }
+}
+
+/*---TABLE---*/
+@media only screen and (min-width: 46.1875em) and (max-width: 63.9375em){
+  .content--taget{
+    padding-bottom: 200px;
+  }
+  .picture{
+    height: 500px;
+  }
+  
+}
+
+/*---TABLE and MOBIE---*/
+@media only screen and (max-width: 63.9375em){
+  .nav__bar--btn{
+    display: block;
+  }
+
+  .heading--main{
+    justify-content:space-between;
+  }
+
+  .header__logo{
+    margin-left: 20px;
+  }
+
+  .header__link{
+    display: none;
+  }
+
+
+
+
+  .law--section{
+    display: none;
+  }
+  .taget--section{
+    padding-bottom: 400px;
+  }
+  .table{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .taget--section__body{
+    margin: 0 50px;
+  }
+
+  .taget--section__header{
+    margin: 40px 0px;
+  }
+  
+  .taget--section__body__img{
+    margin-left: 10px;
+  }
+
+}
+
