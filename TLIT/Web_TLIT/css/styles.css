@@ -701,5 +701,9 @@ li a {
   .taget--section__body__img{
     margin-left: 10px;
   }
+  
+  .taget__picture {
+  width: 100%;
+  }
 
 }
