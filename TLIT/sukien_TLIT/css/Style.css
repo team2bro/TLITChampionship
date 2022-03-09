@@ -254,11 +254,9 @@ video {
   color:#fff;
   display: none;
   margin-right: 30px;
+  font-size: 34px;
 }
 
-.RESPONSIVE--header__link{
-  display: none;
-}
 
 .nav__overlay{
   position: fixed;
@@ -266,8 +264,9 @@ video {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   display: none;
+  animation: fadeIn linear 0.2s;
 }
 
 .RESPONSIVE--header__link{
@@ -275,23 +274,57 @@ video {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 320px;
+  width: 280px;
   max-width: 100%;
   background-color: #fff;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform linear 0.2s, opacity linear 0.2s;
 
 }
 .RESPONSIVE--nav--link{
-  margin-top: 30px;
-
+  margin-top: 46px;
 }
 .RESPONSIVE--nav__{
   text-decoration: none;
   color: #333;
   display: block;
   padding: 8px 0;
-  font-size: 1.4rem;
+  font-size: 20px;
+}
+.nav__li{
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.079);
+  background-clip: padding-box;
+  line-height: 30px;
+}
+#in{
+  background-color: #ccc;
+}
+.nav__mobie-close{
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  font-size: 36px;
+  color: #666;
+}
 
+.nav_input:checked ~ .nav__overlay{
+  display: block;
+}
 
+.nav_input:checked ~ .RESPONSIVE--header__link{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
