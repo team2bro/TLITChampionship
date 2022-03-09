@@ -176,6 +176,7 @@ h5 {
   background-color: transparent;
 }
 .noti--table {
+  overflow-y:scroll; ;
   padding: 20px 20px;
   display: none;
   position: absolute;
@@ -186,6 +187,12 @@ h5 {
   right: -20%;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tb--:first-child{
+  margin-top:0!important;
+}
+.tb--{
+  margin-top:5px;
 }
 .ico__helper:hover .helper--table {
   display: block !important;
@@ -412,11 +419,20 @@ h5 {
     display: flex;
     flex-direction:column;
 }
+.comment--user{
+  display: flex;
+  flex-direction:column;
+}
+.chat:first-child{ 
+  margin-top:0!important;
+}
 .chat{
+    margin-top:10px;
     display: flex;
 }
 .chat--comment p{
     margin-left: 10px;
+    word-break: break-word;
 }
 .mess__chat{
     background-color: var(--color__box--search);

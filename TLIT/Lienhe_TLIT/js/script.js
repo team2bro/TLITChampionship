@@ -11,5 +11,8 @@ function addRote(){
 }
 document.querySelector('.times').addEventListener('click',function(){
     document.querySelector('.request--div').classList.remove('open')
-
 })
+setTimeout(()=>{
+    document.querySelector('.main').classList.remove("wait")
+    document.querySelector('.loadding').classList.add("wait")
+},5000)

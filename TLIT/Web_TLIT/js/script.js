@@ -11,3 +11,7 @@ $('.slider').slick({
 function gotogioithieu(){
    location.href = '../../TLIT/GIOITHIEU_TLIT/index.html';
 }
+setTimeout(()=>{
+   document.querySelector('.main').classList.remove("wait")
+   document.querySelector('.loadding').classList.add("wait")
+},7000)

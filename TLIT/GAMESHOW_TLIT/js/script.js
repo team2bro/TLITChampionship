@@ -4,9 +4,6 @@ function goToFindLove() {
 function goToFruitGame() {
   window.open('../FruitGame/index.html', '_blank');
 }
-function goToChatChung() {
-  window.open('https://chatchungtlit.herokuapp.com/', '_blank')
-}
 function speech1() {
   document.querySelector('.speech1').play()
 }
@@ -22,100 +19,7 @@ function speech4() {
 function returnPage() {
   location.href = "../../Web_TLIT/index.html"
 }
-function botSupported() {
-  document.querySelector('.speech1').play()
-  document.querySelector('.addbot').innerHTML = `
-  <div class="bot bot--1">
-            <div class="bot--sister__talk setout_text">
-                <div class="bot--sister ">
-                    <img onclick="speech1()"  src="./CSS/IMG/bot.png" alt="bot">
-                </div>
-                <div class="anim-typewriter line-1"> 
-                    Xin chào mình là cô bot của TLIT. Rất vui được giúp đỡ bạn.
-                </div>
-                <div class="anim-typewriter line-1"> 
-                    Bạn đã biết được những tính năng trang GAMESHOW này chưa.
-                </div>
-            </div>
-            <div class="btn--bot setout">
-                <button onclick="closebotbtn1()" class="yes btn__bot">
-                    Rồi!
-                </button>
-                <button onclick="goOn1()" class="no btn__bot ">
-                    Chưa!
-                </button>
-            </div>
-    </div>
 
-    <div class="bot bot--2">
-        <div class="bot--sister__talk setout_text2">
-            <div class="bot--sister ">
-                <img onclick="speech2()" src="./CSS/IMG/bot.png" alt="bot">
-            </div>
-            <div class="anim-typewriter line-1"> 
-                Click vào đây để phát nhạc, sẽ giúp bạn giải tỏa căng thắng
-            </div>
-            <div class="anim-typewriter line-1"> 
-                Tất nhiên khi bạn click lần nữa thì nhạc sẽ dừng 
-            </div>
-        </div>
-        <div class="btn--bot setout2">
-            <button onclick="closebotbtn2()" class="yes btn__bot">
-                Đã hiểu!
-            </button>
-            <button onclick="goOn2()" class="no btn__bot ">
-                Tiếp tục
-            </button>
-        </div>
-    </div>
-
-    <div class="bot bot--3">
-        <div class="bot--sister__talk setout_text3">
-            <div class="bot--sister ">
-                <img onclick="speech3()" src="./CSS/IMG/bot.png" alt="bot">
-            </div>
-            <div class="anim-typewriter line-1"> 
-                Click vào đây để tới FindLove và ChatChungTLIT. Do ChatChungTLIT
-            </div>
-            <div class="anim-typewriter line-1"> 
-                chưa hoàn thiện, 
-                nên chỉ vào test chứ dùng mess tiện hơn :)
-            </div>
-            <div class="anim-typewriter line-1"> 
-            </div>
-        </div>
-        <div class="btn--bot setout3">
-            <button onclick="closebotbtn3()" class="yes btn__bot">
-                Đã hiểu!
-            </button>
-            <button onclick="goOn3()" class="no btn__bot ">
-                Tiếp tục
-            </button>
-        </div>
-    </div>
-
-    <div class="bot bot--4">
-        <div class="bot--sister__talk set__ setout_text4">
-            <div class="bot--sister ">
-                <img onclick="speech4()" src="./CSS/IMG/bot.png" alt="bot">
-            </div>
-            <div class="anim-typewriter line-1"> 
-                Click vào cây thông để đến phần nhạc dành riêng cho chị Trang.
-            </div>
-            <div class="anim-typewriter line-1"> 
-                Đừng vào khi bạn chưa được cho phép của chị Trang.
-            </div>
-            <div class="anim-typewriter line-1"> 
-            </div>
-        </div>
-        <div class="btn--bot setout4">
-            <button onclick="closebotbtn4()" class="yes btn__bot">
-                kết thúc!
-            </button>
-        </div>
-    </div>
-  `
-}
 
 
 
@@ -271,3 +175,7 @@ function closeMusic() {
     document.querySelector('.modal--music').classList.remove('open')
   }, 300)
 }
+setTimeout(()=>{
+  document.querySelector('.main').classList.remove("wait")
+  document.querySelector('.loadding').classList.add("wait")
+},5000)

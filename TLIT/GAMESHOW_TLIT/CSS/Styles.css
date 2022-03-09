@@ -12,6 +12,34 @@ html {
 body {
   overflow-x: hidden;
 }
+/*--------loadding------------------*/
+.wait{
+  display: none !important;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.loadding{
+  background-color: #fff;
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  font-size:20px;
+}
+/*------------------------*/
 /*-------------------------------header-----------------------------------------*/
 .logo--img {
   width: 70px;
@@ -213,38 +241,7 @@ li a {
 .icon__cute__1:active{
   transform:scale(0.95);
 }
-.bot{
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-}
-.bot--sister img{
-  cursor: pointer;
-  width: 200px;
-  
-}
-.bot--sister {
-  position: absolute;
-  top:-186%;
-  left:50%;
-  width:100%;
-  z-index: 10010;
-}
-.bot--sister__talk{
-  position: relative;
-  top:50%;
-  z-index: 1000;
-  left:50%;
 
-  transform: translate(-50%,-50%);
-  padding: 30px;
-  background-color: white;
-  color:#293b5f;
-  border-radius:10px;
-  width: 40%;
-}
 @keyframes typewriter{
   from{width: 0;}
 }

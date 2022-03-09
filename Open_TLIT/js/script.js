@@ -35,3 +35,7 @@ document.querySelector('.link__signup').addEventListener('click',() => {
     logIn.classList.remove('open')
     signUp.classList.add('open')
 })
+setTimeout(()=>{
+    document.querySelector('.main').classList.remove("wait")
+    document.querySelector('.loadding').classList.add("wait")
+},5000)

@@ -29,7 +29,7 @@
                 </div>
             </div>
             <textarea  name="" id="khungdangbai"  rows="7" placeholder="Mời bạn nhập dòng trạng thái..."></textarea>
-            <button class="btn btn--post">Đăng bài</button>
+            <button onclick="dangBai()" class="btn btn--post">Đăng bài</button>
         </div>
     </div>
     <header>
@@ -62,7 +62,7 @@
                             <div class="noti--table">
                                 <h2>Thông báo</h2>
                                 <ul>
-                                    <li> 
+                                    <li class="tb--"> 
                                         <div class="access access--helper">
                                             <div class="access__avt avt--helper">
                                                 <img class avt src="./assets/img/avt_hTrang.jpg" alt="avt">
@@ -114,7 +114,7 @@
                                     <div class="ico helper--ico ico__moon">
                                         <i class="fa-solid fa-moon"></i>
                                     </div>
-                                    <div class=" display--des">
+                                    <div class="display--des">
                                         <h5>Màn hình & Trợ năng</h5>
                                         <i class=" fa-solid fa-chevron-right"></i>
                                     </div>
@@ -152,80 +152,82 @@
                 <div onclick="openBox()" class="box__post">
                     Thắng ơi, bạn đang nghĩ gì thế?
                 </div>
-                
             </div>
-            <div class="box">
-                <div class="box--header box--para">
-                    <div class="avt--box access__avt">
-                        <img class avt src="../main/img/avt.jpg" alt="avt">
-                    </div>
-                    <div class="access__name">
-                        <h5>Thắng</h5>
-                        <span class="time--post">27 phút  · <i class="fa-solid fa-earth-americas"></i></span>
-                    </div>
-                </div>
-                <div class="box--body">
-                    <p> Ngày 8/3 đến, anh chúc em những lời chúc tốt đẹp nhất và luôn muốn
-                        cảm ơn em khi em đã luôn lắng nghe,hỗ trợ anh, đặc biệt là luôn bên 
-                        cạnh anh. Happy Women's Day.</p>
-                </div>
-                <div class="box--last">
-                    <div class="box--last__UI">
-                        <div class="feel__UI">
-                            <img src="./assets/img/love.svg" alt="love">
-                            <span class="number--feel">
-                                5
-                            </span>
+            <div class="status">
+                <div class="box box--base">
+                    <div class="box--header box--para">
+                        <div class="avt--box access__avt">
+                            <img class avt src="../main/img/avt.jpg" alt="avt">
                         </div>
-                        <div class="comment__UI">
-                            <span>1 </span>bình luận
+                        <div class="access__name">
+                            <h5>Thắng</h5>
+                            <span class="time--post">27 phút  · <i class="fa-solid fa-earth-americas"></i></span>
                         </div>
                     </div>
-                    <hr  />
-                    <div class="box--last__UI2">
-                        <div class="UI2"> 
-                            <div class=" UI feel">
-                                <span class="feel--love"><span class="heart"></span> Yêu thích</span>
+                    <div class="box--body">
+                        <p> Ngày 8/3 đến, anh chúc em những lời chúc tốt đẹp nhất và luôn muốn
+                            cảm ơn em khi em đã luôn lắng nghe,hỗ trợ anh, đặc biệt là luôn bên 
+                            cạnh anh. Happy Women's Day.</p>
+                    </div>
+                    <div class="box--last">
+                        <div class="box--last__UI">
+                            <div class="feel__UI">
+                                <img src="./assets/img/love.svg" alt="love">
+                                <span class="number--feel">
+                                    5
+                                </span>
+                            </div>
+                            <div class="comment__UI">
+                                <span class="number--comment"></span> bình luận
                             </div>
                         </div>
-                        <div class="UI2 ">
-                            <div class="UI comment">
-                                <span class="comment--love"><i class="fa-solid fa-message"></i> Bình luận</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box--comment close">
-                        <hr style="margin-top:10px;" />
-
-                        <div class="UXcomment ">
-                            <div class="chat">
-                                <div class="access__avt ">
-                                    <img class avt src="../main/img/avt.jpg" alt="avt">
-                                    
-                                </div>
-                                <div class="mess__chat">
-                                    <div class="access__name">
-                                        <h5>Thắng</h5>
-                                        
-                                    </div>
-                                    <div class="chat--comment">
-                                        <p>Hay quá anh ơi!</p>
-                                    </div>
+                        <hr  />
+                        <div class="box--last__UI2">
+                            <div class="UI2"> 
+                                <div onclick="loveFirst('.box--base')" class=" UI feel ">
+                                    <span class="feel--love"><span class="heart"></span> Yêu thích</span>
                                 </div>
                             </div>
-                            <div class="mess__box">
-                                <div class="access__avt active-access">
-                                    <img class avt src="../main/img/avt.jpg" alt="avt">
-                                    <div class="btn--active">
+                            <div class="UI2 ">
+                                <div onclick="commentFirst('.box--base')" class="UI comment">
+                                    <span class="comment--love"><i class="fa-solid fa-message"></i> Bình luận</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box--comment close">
+                            <hr style="margin-top:10px;" />
+    
+                            <div class="UXcomment">
+                                <div class="comment--user">
+                                    <div class="chat">
+                                        <div class="access__avt ">
+                                            <img class avt src="../main/img/avt.jpg" alt="avt">
+                                            
+                                        </div>
+                                        <div class="mess__chat">
+                                            <div class="access__name">
+                                                <h5>Thắng</h5>
+                                                
+                                            </div>
+                                            <div class="chat--comment">
+                                                <p>Hay quá anh ơi!</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mess__text">
-                                    <input class="chat__input" type="text" placeholder="Viết bình luận công khai..." />
+                                <div class="mess__box">
+                                    <div class="access__avt active-access">
+                                        <img class avt src="../main/img/avt.jpg" alt="avt">
+                                        <div class="btn--active">
+                                        </div>
+                                    </div>
+                                    <div  class="mess__text">
+                                        <input onclick="chatting('.box--base')" class="chat__input" type="text" placeholder="Viết bình luận công khai..." />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
