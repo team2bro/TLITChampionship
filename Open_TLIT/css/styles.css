@@ -570,3 +570,19 @@ html{
 .nganh option{
     color: #3B5999;
 }
+
+/*-------------------RESPONSIVE------------------*/
+
+/*---MOBIE---*/
+@media only screen and (max-width: 46.1875em) {
+    .main--content__form{
+        flex-direction: column;
+    }
+    .form--text{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form--btn{
+        width: 100%;
+    }
+}
