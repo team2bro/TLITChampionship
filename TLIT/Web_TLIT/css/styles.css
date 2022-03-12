@@ -738,6 +738,9 @@ li a {
   .taget--section__body__img{
     margin-left: 10px;
   }
+  .clb--section__body {
+    margin: 30px 20px;
+}
 
 }
 
