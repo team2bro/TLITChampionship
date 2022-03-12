@@ -1,3 +1,40 @@
+document.querySelector(".ico__helper").addEventListener("click", ()=>{
+    if(document.querySelector(".helper--table").classList.contains("eblock")){
+        document.querySelector(".helper--table").classList.remove("eblock")
+    }
+    else 
+        document.querySelector(".helper--table").classList.add("eblock")
+})
+document.querySelector(".helper--table").addEventListener("click", (e)=>{
+    e.stopPropagation();
+})
+document.querySelector(".ico__noti").addEventListener("click", ()=>{
+    if(document.querySelector(".noti--table").classList.contains("eblock")){
+        document.querySelector(".noti--table").classList.remove("eblock")
+    } 
+    else 
+        document.querySelector(".noti--table").classList.add("eblock")
+})
+document.querySelector(".helper--table").addEventListener("click", (e)=>{
+    e.stopPropagation();
+})
+const setTheme = theme => document.documentElement.className = theme;
+function checkbox(x){
+    if (x=="#off"){
+        setTheme('light')
+    }
+    else 
+        setTheme('dark')
+    document.querySelector(x).checked=true
+}
+function openMoon(){
+    document.querySelector(".f--helper").classList.add("nblock")
+    document.querySelector(".moon--helper").classList.remove("nblock")
+}
+function closeMoon(){
+    document.querySelector(".f--helper").classList.remove("nblock")
+    document.querySelector(".moon--helper").classList.add("nblock")
+}
 var nB=0;
 checkComment('.box--base')
 function loveFirst(k){
@@ -44,7 +81,7 @@ function dangBai(){
             </div>
             <div class="access__name">
                 <h5>Thắng</h5>
-                <span class="time--post">27 phút  · <i class="fa-solid fa-earth-americas"></i></span>
+                <span class="time--post ctime">${Math.floor(Math.random() * 60)} giây · </span>
             </div>
         </div>
         <div class="box--body">
@@ -97,6 +134,7 @@ function dangBai(){
     </div>
 `+document.querySelector(".status").innerHTML
     checkComment('.box--'+`${nB}`)
+    getStatusAppear(document.querySelector(".appear").value,'.box--'+`${nB}`)
     nB++
 }
 function checkComment(k){
@@ -128,6 +166,40 @@ function chatting(k){
             chatting.value =""
             checkComment(k)
         }
-    })
-    
+    })   
+}
+function checkTime(){
+    timeline(".box--base",8,0,0,8)
+}
+function timeline(k,hour, minute,second,date){
+    var today = new Date();
+    var timeHours=today.getHours();
+    var timeDays = today.getDate();
+    var timeMinutes = today.getMinutes();
+    var timeSeconds = today.getSeconds();
+    var giay=timeSeconds-second
+    var phut=timeMinutes-minute
+    var ngay=timeDays-date
+    var gio=timeHours-hour
+    if (ngay>0){
+        document.querySelector(k+" .ctime").innerHTML=ngay+" ngày "
+    }
+    else if (gio>0){
+        document.querySelector(k+" .ctime").innerHTML=gio+" giờ "
+        }
+        else if (phut>0){
+            document.querySelector(k+" .ctime").innerHTML=phut+" phút "
+            }
+            else if (phut>0){
+                document.querySelector(k+" .ctime").innerHTML=giay+" giây "
+                }
+}
+function getStatusAppear(x,y){
+    console.log(x)
+    if (x==1){
+       document.querySelector(y+" .ctime").innerHTML=document.querySelector(y+" .ctime").innerHTML+`<i class="time--post fa-solid fa-earth-americas"></i>`
+    }
+    if (x==2){
+        document.querySelector(y+" .ctime").innerHTML=document.querySelector(y+" .ctime").innerHTML+`<i class="time--post fa-solid fa-user-group"></i>`
+    }
 }

@@ -1,8 +1,25 @@
-:root {
+:root,
+:root.light {
   --color__box--search: #F0F2F5;
   --color__ico: #e4e6eb;
   --color__text--primary: #65676b;
   --color--active:#31A24C;
+  --color--bg:white;
+  --color--base:black;
+  --color--home:#293b5f;
+  --color--box:white;
+  --color--off:white;
+}
+:root.dark{
+  --color--bg:#242526;
+  --color__box--search: #3A3B3C;
+  --color__ico: #353131;
+  --color__text--primary: #65676b;
+  --color--active:#31A24C;
+  --color--bg:#242526;
+  --color--box:#18191A;
+  --color--home:#d7dff0;
+  --color--base:white;
   --color--off:white;
 
 }
@@ -13,7 +30,7 @@
 }
 html {
   font-family: "Roboto", sans-serif;
-  color: black;
+  color: var(--color--base);
   text-rendering: optimizeLegibility;
   font-size: 16px;
   overflow-x: hidden;
@@ -44,7 +61,7 @@ header {
   position: fixed;
   width: 100%;
   height: 60px;
-  background-color: white;
+  background-color: var( --color--bg);
   box-shadow: rgba(108, 115, 121, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: space-between;
@@ -69,7 +86,7 @@ ul {
   justify-content: center;
   align-items: center;
   transform: translateX(-120px);
-  border-bottom: 4px solid #293b5f;
+  border-bottom: 4px solid var(--color--home);
 }
 .header__right {
   display: flex;
@@ -79,6 +96,9 @@ ul {
 .header__search {
   position: relative;
   margin-left: 15px;
+}
+.pos{
+  position: relative;
 }
 .search__box {
   font-size: 18px;
@@ -102,7 +122,7 @@ ul {
 .home {
   font-size: 25px;
   cursor: pointer;
-  color: #293b5f;
+  color: var(--color--home);
 }
 
 .access {
@@ -164,9 +184,6 @@ h5 {
 .ico__helper {
   position: relative;
 }
-.ico__noti:hover .noti--table {
-  display: block !important;
-}
 .ico__noti::before {
   content: "";
   position: absolute;
@@ -182,7 +199,7 @@ h5 {
   position: absolute;
   width: 350px;
   height: 500px;
-  background-color: white;
+  background-color: var(--color--bg);
   top: 100%;
   right: -20%;
   border-radius: 5px;
@@ -194,16 +211,11 @@ h5 {
 .tb--{
   margin-top:5px;
 }
-.ico__helper:hover .helper--table {
+.eblock{
   display: block !important;
 }
-.ico__helper::before {
-  content: "";
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  top: 80%;
-  background-color: transparent;
+.nblock{
+  display: none !important;
 }
 .helper--table {
   padding: 20px 20px;
@@ -211,7 +223,7 @@ h5 {
   position: absolute;
   width: 350px;
   height: 400px;
-  background-color: white;
+  background-color: var(--color--bg);
   top: 100%;
   right: -20%;
   border-radius: 5px;
@@ -230,6 +242,53 @@ h5 {
   align-items: center;
   margin-top: 5px;
   padding: 5px 0;
+}
+.moon--helper h5{
+  font-size:26px;
+}
+.moon--helper{
+  animation: rightToLeft 0.4s ease-in-out ;
+}
+.chedotoi{
+  display: flex;
+  justify-self: start;
+  align-items: flex-start;
+}
+.chedotoi .helper--ico{
+  width: 56px;
+
+}
+.desmoon{
+  margin-left: 20px;
+  width: 85%;
+  margin-bottom: 20px;
+}
+.onoffmoon{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  height:30px;
+  font-size:18px;
+  font-weight:600;
+  padding:10px 20px;
+}
+.onoffmoon:hover{
+  background-color: var(--color__box--search);
+  border-radius: 10px;
+}
+.moon--helper .display--des:hover i{
+  transform:translateX(-10px);
+}
+.onoffmoon input[type=radio]{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+}
+.moon--helper .display--des{
+  margin: 0 10px 20px 10px !important;
+  width: 100%;
+  align-items: center;
+  justify-content:space-around
 }
 .bug--des {
   margin-left: 20px;
@@ -292,7 +351,7 @@ h5 {
 }
 .box {
   margin-top: 10px;
-  background-color: white;
+  background-color: var(--color--box);
   padding: 10px 20px 10px 20px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border-radius: 10px;
@@ -557,13 +616,11 @@ h5 {
     margin-top: 10px;
 }
 .friend--active{
-    left:10%;
     bottom:5%;
     width: 15px;
     height: 15px;
 }
 .friend--off{
-    left:10%;
     bottom:5%;
     background-color: var(--color--off);
     border: 3px solid rgb(87, 87, 87);
@@ -579,4 +636,10 @@ h5 {
     background-position: right;
   }
 }
-  
+@keyframes rightToLeft {
+  0%{
+    opacity: 0;
+    transform:translateX(100%)
+  }
+
+}
