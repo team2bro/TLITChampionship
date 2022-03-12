@@ -49,6 +49,7 @@ function check(a, b, c) {
             document.querySelector(".tb2").remove();
         }, 3000)
     }
+    document.querySelector(".answer--form input").classList.add("epointer")
 }
 function nextLevel2() {
     where=1;

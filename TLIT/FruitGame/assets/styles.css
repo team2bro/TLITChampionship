@@ -252,6 +252,9 @@ button{
     border-radius: 10px;
     border: 1px solid black;
 }
+.epointer{
+    pointer-events: none;
+}
 .btn--sub{
     margin-left: 10px;
     background-color:#00AA00;
