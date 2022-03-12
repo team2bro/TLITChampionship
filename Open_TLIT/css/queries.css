@@ -69,3 +69,15 @@
         padding: 20px 50px;
     }
 }
+@media only screen and (max-width: 400px){
+    .main--content {
+        left: 50px;
+        margin-right: 50px;
+    }
+    .main--content__body {
+        display: none;
+    }
+    .heading--main__right {
+        margin-right: 4px;
+    }
+}
