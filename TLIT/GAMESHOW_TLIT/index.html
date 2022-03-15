@@ -18,38 +18,6 @@
         <div class="">Đang tải...</div>
     </div>
     <div class="main wait">
-        <div class="modal--music">
-            <div class="modal--caythong">
-                <div class="music--header">
-                    Âm nhạc của chị Trang (Trưởng ban ứng dụng)
-                </div>
-                <div onclick='closeMusic()' class="btn--close close--music"><i class="fas fa-times"></i></div>
-                <div class="music--select">
-                    <select name="music" id="music">
-                        <option value="1" selected='selected'>Brenda Lee Rockin Around The Christmas Tree</option>
-                        <option value="2">Elvis Presley Cant Help Falling In Love</option>
-                        <option value="3">Frank Sinatra Jingle Bells</option>
-                        <option value="4">Life Could Be A Dream Trap Remix</option>
-                        <option value="5">Michael Bublé Holly Jolly Christmas Official HD</option>
-                        <option value="6">Michael Bublé Its Beginning To Look A Lot Like Christmas</option>
-                        <option value="7">Sleigh Ride Christmas Song</option>
-                        <option value="8">Last Christmas George Michael Wham Beth Acoustic Piano Cover</option>
-                    </select>
-                </div>
-                <div class="song">
-                    <video style="height:200px;position:absolute;width: 100%;"  autoplay muted loop>
-                        <source src="./Audio-Trang sister/noel.mp4" type="video/mp4">
-                    </video>
-                    <audio class='song--play play1' controls >
-                        <source class="theSong Song1" src="./Audio-Trang sister/Brenda Lee  Rockin Around The Christmas Tree Official Lyric Video.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-            </div>
-        </div>
-  
-
-        
-        
         <header class="heading--main">
             <div class="header__logo">
                 <img onclick="returnPage()" class="logo--img" src="./CSS/IMG/logo.png" alt="logo">
@@ -70,7 +38,6 @@
     
             <label for="nav-mobie-input" class="nav__overlay">
             </label>
-    
     <!-- Nav TABLE AND MOBIE  -->
             <nav class="RESPONSIVE--header__link">
                 <label for="nav-mobie-input" class="nav__mobie-close"><i class="fa-solid fa-xmark"></i></label>
@@ -83,60 +50,33 @@
                 </ul>
             </nav>
         </header>
-        <audio class="speech1">
-            <source src="./CSS/IMG/AudioTextToSpeech.mp3" type="audio/mp3">
-        </audio>
-        <audio class="speech2">
-            <source src="./CSS/IMG/2.mp3" type="audio/mp3">
-        </audio>
-        <audio class="speech3">
-            <source src="./CSS/IMG/3.mp3" type="audio/mp3">
-        </audio>
-        <audio class="speech4">
-            <source src="./CSS/IMG/4.mp3" type="audio/mp3">
-        </audio>
-        <audio class="music" >
-            <source src="./CSS/IMG/Thế anh_mixdown.mp3" type="audio/mp3">
-        </audio>
-        <video autoplay loop muted class="videobg__love">
-            <source src="./CSS/IMG/Hearts - 81890.mp4">
-        </video>
-        <div class="main--love">
-           
-            <img class="picture--left " src="./CSS/IMG/image_processing20201217-13100-11og928-removebg.png" alt="love1">
-            <img class="icon__cute__1" src="./CSS/IMG/3159075.png" alt="love2">
-            <img class="caythong icon__cute__1" src="./CSS/IMG/caythong.png" alt="love3">
-            <div>
-               <p class="text header--main__text">TLIT</p> 
+        <div class="wrap loveline">
+            <div class="love--left love--text text__color">
+                LOVE
             </div>
-            <div>
-                <p class="text header--body__text">Đường tình duyên</p> 
+            <div class="chidan love--text text__color">
+                <i class="fa-solid fa-left-long"></i>Click here!
             </div>
-           
-            <div class="btn">
+            <svg onclick="goToLoveLine()" class="heart love--mid love--text" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                  c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+              </svg> 
+            <div class="love--right love--text text__color">
+                LINE
+            </div>
+        </div>
+        <div class="wrap fruitGame">
+            <div class="fruitUI fruit--text">
+                <span>FruitGame</span> 
                 
-                <div onclick="goToFindLove()" class="btn__ btn--main--love k1">
-                    Go to LoveLine
-                </div>
             </div>
+            <button class="fruitUI btn btn-primary">Play Now!</button>
+            <img class="fruitUI ico1" src="./CSS/IMG/ico1.gif" alt="">
+            <img class="fruitUI ico2" src="./CSS/IMG/ico2.gif" alt="">
+            <img class="fruitUI ico3" src="./CSS/IMG/ico3.gif" alt="">
+
         </div>
-        <div class="main--love game">
-            <div>
-            <p class="text header--main__text">TLIT</p> 
-            </div>
-            <div>
-                <p class="text header--body__text">Fruit Game</p> 
-            </div>
-            
-            <div class="btn">
-                <div onclick="goToFruitGame()" class="btn__ btn--main--love k1">
-                    Go to FruitGame
-                </div>
-            </div>
-            <div class="img--game">
-                <img src="./CSS/IMG/hoaqua.png" alt="gamehoaqua">
-            </div>
-        </div>
+
        <div class="copyright">
             <p class="section--end--text">© Bản quyền thuộc về <span class="team">team2_brother</span>  Thiết kế website <span class="team">TLIT</span> </p>
        </div>

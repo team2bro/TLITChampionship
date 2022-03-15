@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" ype="image/x-icon" href="./assets/img/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Nhắn gửi yêu thương</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body onload="checkTime()">
+    <div class="post">
+        <div class="post--table">
+            <h2>Tạo bài viết</h2>
+            <div class="btn--close"><i class="fa-solid fa-xmark"></i></div>
+            <hr style="margin-top:20px;margin-bottom:10px; " />
+            <div class="access access--friends">
+                <div class="access__avt avt--box ">
+                    <img class avt src="../main/img/avt.jpg" alt="avt">
+                </div>
+                <div class="access__name ">
+                    <h5>Thắng</h5>
+                   <select class="appear">
+                       <option value="1" selected="selected">Công khai</option>
+                       <option value="2">Bạn bè</option>
+                   </select>
+                </div>
+            </div>
+            <textarea  name="" id="khungdangbai"  rows="7" placeholder="Mời bạn nhập dòng trạng thái..."></textarea>
+            <button onclick="dangBai()" class="btn btn--post">Đăng bài</button>
+        </div>
+    </div>
+    <header>
+        <div class="header__left">
+            <div class="header__logo">
+                <img class="logo" src="./assets/img/logo.png" alt="logo">
+            </div>
+            <div class="header__search">
+                <input class="search__box" type="search" name="search" placeholder="Tìm kiếm">
+                <i class="search__button fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="header__mid">
+            <i class="home fa-solid fa-house"></i>
+        </div>
+        <div class="header__right">
+            <div class="access">
+                <div class="access__avt">
+                    <img class avt src="../main/img/avt.jpg" alt="avt">
+                </div>
+                <div class="access__name">
+                    <h5>Thắng</h5>
+                </div>
+            </div>
+            <div class="user__ico">
+                <ul>
+                    <li class="main--nav">
+                        <div class="ico ico__noti">
+                            <i class="fa-solid fa-bell"></i>
+                            <div class="noti--table">
+                                <h2>Thông báo</h2>
+                                <ul>
+                                    <li class="tb--"> 
+                                        <div class="access access--helper">
+                                            <div class="access__avt avt--helper">
+                                                <img class avt src="./assets/img/avt_hTrang.jpg" alt="avt">
+                                            </div>
+                                            <div class="access__name name--helper">
+                                                <h5>Huyền Trang và 4 người khác</h5>
+                                                <p style="color:#65676B;">đã thích dòng trạng thái của bạn</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main--nav">
+                        <div class="ico ico__helper ">
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div class="helper--table">
+                                <div class="f--helper">
+                                    <div class="access access--helper">
+                                        <div class="access__avt avt--helper">
+                                            <img class avt src="../main/img/avt.jpg" alt="avt">
+                                        </div>
+                                        <div class="access__name name--helper">
+                                            <h5>Thắng</h5>
+                                            <p style="color:#65676B;">Xem thông tin cá nhân</p>
+                                        </div>
+                                    </div>
+                                    <hr  style="margin-top:10px;" />
+                                    <div class="helper focus bug--helper">
+                                        <div class="ico helper--ico ico__bug">
+                                            <i class="fa-solid fa-bug"></i>
+                                        </div>
+                                        <div class="des bug--des">
+                                            <h5>Báo lỗi</h5>
+                                            <p style="color:#65676B;">Chung tay phát triển TLIT</p>
+                                        </div>
+                                    </div>
+                                    <hr style="margin-top:10px;" />
+                                    <div class="helper focus display--helper">
+                                        <div class="ico helper--ico ico__gear">
+                                            <i class="fa-solid fa-gear"></i>
+                                        </div>
+                                        <div class=" display--des">
+                                            <h5>Cài đặt</h5>
+                                            <i class="arr--left fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                    <div onclick="openMoon()" class="helper focus display--helper">
+                                        <div class="ico helper--ico ico__moon">
+                                            <i class="fa-solid fa-moon"></i>
+                                        </div>
+                                        <div class="display--des">
+                                            <h5>Màn hình & Trợ năng</h5>
+                                            <i class=" fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="helper focus display--helper">
+                                        <div class="ico helper--ico ico__logout">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                        </div>
+                                        <div class=" display--des">
+                                            <h5>Đăng xuất</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="moon--helper nblock">
+                                    <div class="display--des">
+                                        <i onclick="closeMoon()" class="ico fa-solid fa-left-long"></i>
+                                        <h5>Màn hình & Trợ năng</h5>
+                                    </div>
+                                    <div class="chedotoi">
+                                        <div class="ico helper--ico ico__moon">
+                                            <i class="fa-solid fa-moon"></i>
+                                        </div>
+                                        <div  class="desmoon">
+                                            <h4>Chế độ tối</h4>
+                                            <p style="color:var(--color__text--primary);font-size:14px;"> Điều chỉnh giao diện của NGYT để giảm độ chói và cho đôi mắt được nghỉ ngơi.</p>
+                                        </div>
+                                    </div>
+                                    <ul style="width: 80%;margin-left:10%;">
+                                        <li onclick="checkbox('#off') " class="onoffmoon"> 
+                                            <label for="off">Tắt</label>
+                                            <input type="radio" name="btn" id="off" checked> 
+                                        </li>
+                                        <li onclick="checkbox('#on')" class="onoffmoon">
+                                            <label for="on">Bật</label>
+                                            <input type="radio" name="btn" id="on"> 
+                                        </li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="body">
+        <div class="body__left">
+            <img class="ad ad__1" src="./assets/img/ad__1.jpg" alt="ad1">
+            <img class="ad ad__2" src="./assets/img/ad__2.jpg" alt="ad2">
+            <img class="ad ad__3" src="./assets/img/ad__3.jpg" alt="ad3">
+            <img class="ad ad__1" src="./assets/img/ad__1.jpg" alt="ad1">
+            <img class="ad ad__2" src="./assets/img/ad__2.jpg" alt="ad2">
+            <img class="ad ad__3" src="./assets/img/ad__3.jpg" alt="ad3">
+        </div>
+        
+        <div class="body__middle">
+            <div class="box box--para">
+                <div class="avt--box access__avt">
+                    <img class avt src="../main/img/avt.jpg" alt="avt">
+                </div>
+                <div onclick="openBox()" class="box__post">
+                    Thắng ơi, bạn đang nghĩ gì thế?
+                </div>
+            </div>
+            <div class="status">
+                <div class="box box--base">
+                    <div class="box--header box--para">
+                        <div class="avt--box access__avt">
+                            <img class avt src="../main/img/avt.jpg" alt="avt">
+                        </div>
+                        <div class="access__name">
+                            <h5>Thắng</h5>
+                            <span class="time--post ctime"></span> · <i class="time--post fa-solid fa-earth-americas"></i></span>
+                        </div>
+                    </div>
+                    <div class="box--body">
+                        <p> Ngày 8/3 đến, anh chúc em những lời chúc tốt đẹp nhất và luôn muốn
+                            cảm ơn em khi em đã luôn lắng nghe,hỗ trợ anh, đặc biệt là luôn bên 
+                            cạnh anh. Happy Women's Day.</p>
+                    </div>
+                    <div class="box--last">
+                        <div class="box--last__UI">
+                            <div class="feel__UI">
+                                <img src="./assets/img/love.svg" alt="love">
+                                <span class="number--feel">
+                                    5
+                                </span>
+                            </div>
+                            <div class="comment__UI">
+                                <span class="number--comment"></span> bình luận
+                            </div>
+                        </div>
+                        <hr  />
+                        <div class="box--last__UI2">
+                            <div class="UI2"> 
+                                <div onclick="loveFirst('.box--base')" class=" UI feel ">
+                                    <span class="feel--love"><span class="heart"></span> Yêu thích</span>
+                                </div>
+                            </div>
+                            <div class="UI2 ">
+                                <div onclick="commentFirst('.box--base')" class="UI comment">
+                                    <span class="comment--love"><i class="fa-solid fa-message"></i> Bình luận</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box--comment close">
+                            <hr style="margin-top:10px;" />
+    
+                            <div class="UXcomment">
+                                <div class="comment--user">
+                                    <div class="chat">
+                                        <div class="access__avt ">
+                                            <img class avt src="../main/img/avt.jpg" alt="avt">
+                                            
+                                        </div>
+                                        <div class="mess__chat">
+                                            <div class="access__name">
+                                                <h5>Thắng</h5>
+                                                
+                                            </div>
+                                            <div class="chat--comment">
+                                                <p>Hay quá anh ơi!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mess__box">
+                                    <div class="access__avt active-access">
+                                        <img class avt src="../main/img/avt.jpg" alt="avt">
+                                        <div class="btn--active">
+                                        </div>
+                                    </div>
+                                    <div  class="mess__text">
+                                        <input onclick="chatting('.box--base')" class="chat__input" type="text" placeholder="Viết bình luận công khai..." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body__right">
+            <h2>Bạn bè của bạn</h2>
+            <hr style="margin:20px 0;" />
+            <ul>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_hTrang.jpg" alt="avt">
+                            <div class="btn--active friend--off">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Huyền Trang</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_dTrang.jpg" alt="avt">
+                            <div class="btn--active friend--active">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Đặng Trang</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_cHieu.jpg" alt="avt">
+                            <div class="btn--active friend--active">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Chí Hiếu</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_cYen.jpg" alt="avt">
+                            <div class="btn--active friend--off">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Chu Yến</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_qViet.jpg" alt="avt">
+                            <div class="btn--active friend--active">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Việt Tô Quang</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_vNgoc.jpg" alt="avt">
+                            <div class="btn--active friend--off">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Hoàng Vân Ngọc</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_tAnh.jpg" alt="avt">
+                            <div class="btn--active friend--off">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Thế Anh</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_vSang.jpg" alt="avt">
+                            <div class="btn--active friend--active">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Nguyễn Văn Sáng</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_tHung.jpg" alt="avt">
+                            <div class="btn--active friend--off">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Tuấn Hùng Nguyễn</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="friends">
+                    <div class="access access--friends active-access">
+                        <div class="access__avt avt--box pos">
+                            <img class avt src="./assets/img/avt_tLinh.jpg" alt="avt">
+                            <div class="btn--active friend--active">
+                            </div>
+                        </div>
+                        <div class="access__name ">
+                            <h5>Nguyễn Thùy Linh</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
