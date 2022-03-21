@@ -96,8 +96,9 @@ li a {
   position: relative;
 }
 .loveline{
-  background-image:url(./IMG/bg1.png);
+  background-image:url(./IMG/bg1.jpg);
   background-position: center ;
+  background-size:cover;
   
 }
 .fruitGame{
