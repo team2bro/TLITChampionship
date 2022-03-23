@@ -15,3 +15,27 @@ setTimeout(()=>{
    document.querySelector('.main').classList.remove("wait")
    document.querySelector('.loadding').classList.add("wait")
 },7000)
+
+//---------------------------------
+
+ScrollReveal({ 
+   reset: true ,
+   distance:'150px',
+   duration: 1000,
+   delay:400,
+});
+ScrollReveal().reveal('.taget__picture', { delay: 200 , origin:'left'});
+ScrollReveal().reveal('.content--taget', { delay: 200 , origin:'right'});
+ScrollReveal().reveal('.law--btn ', { delay: 200 , origin:'bottom'});
+ScrollReveal().reveal('.law--btn ', { delay: 200 , origin:'bottom'});
+ScrollReveal().reveal('.law--section__header ', { delay: 200 , origin:'top'});
+ScrollReveal().reveal('.law--section__body ', { delay: 200 , origin:'top'});
+ScrollReveal().reveal('.section__body__1 ', { delay: 100 , origin:'bottom'});
+ScrollReveal().reveal('.section__body__2 ', { delay: 200 , origin:'bottom'});
+ScrollReveal().reveal('.section__body__3 ', { delay: 300 , origin:'bottom'});
+ScrollReveal().reveal('.section__body__4 ', { delay: 400 , origin:'bottom'});
+
+
+
+
+

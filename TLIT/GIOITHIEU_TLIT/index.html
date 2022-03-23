@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="./assets/css/grid.css">
     <title>TLIT-Giới thiệu</title>
 </head>
@@ -78,7 +79,7 @@
 
     <div class="section1">
         <div class="section1__img col ">
-            <img class="img__"  src="./assets/img/hanhtrinhphattrien.jpg" alt="hanhtrinhphattrien">
+            <img class="img__ img1"  src="./assets/img/hanhtrinhphattrien.jpg" alt="hanhtrinhphattrien">
         </div>
         <div class="section1__text col ">
             <h1 class="section1__title">Hành Trình và Phát Triển</h1>
@@ -97,15 +98,15 @@
         </div>
 
         <div class="section2__img col ">
-            <img class="img__" src="./assets/img/TLIT_avt.jpg" alt="tlit">
+            <img class="img__ img2" src="./assets/img/TLIT_avt.jpg" alt="tlit">
         </div>
     </div>
 
     <!-- các Trưởng ban -->
     <div id="band__leader--section">
         <h2 class="text__header">Trưởng các ban</h2>
-        <div class="row band__leader--body">
-            <div class="col ban__leader--info">
+        <div class="row band__leader--body ">
+            <div class="col ban__leader--info if__1">
                 <div class="container__img">
                     <img class="ban__leader--img" src="./assets/img/boss.png" alt="boss">
                     <div class="content__img">
@@ -118,7 +119,7 @@
                     <a href="https://www.instagram.com/thuhuong_ngg/?fbclid=IwAR3guLcrjpoAnpdIj_xeyDLyRnFuEzrEzApSB-pmty4bpZifrvEvL2d5rO0"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col ban__leader--info">
+            <div class="col ban__leader--info if__2">
                 <div class="container__img">
                     <img class="ban__leader--img" src="./assets/img/banud3.jpg" alt="">
                     <div class="content__img">
@@ -132,7 +133,7 @@
                     <a href="https://www.instagram.com/trang114_sakura/?fbclid=IwAR11fyb1x-xMfuj9snw1NneHb9uLCCeCVcOdDsyYkke5tAa8SHSYd9amLQs"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col ban__leader--info">
+            <div class="col ban__leader--info if__3">
                 <div class="container__img">
                     <img class="ban__leader--img" src="./assets/img/bansk2.png" alt="">
                     <div class="content__img">
@@ -145,7 +146,7 @@
                     <a href="https://www.instagram.com/2_n_v_s_2/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col ban__leader--info">
+            <div class="col ban__leader--info if__4">
                 <div class="container__img">
                     <img class="ban__leader--img" src="./assets/img/bantt.png" alt="">
                     <div class="content__img">
@@ -189,5 +190,22 @@
             <p class="section--end--text">© Bản quyền thuộc về <span class="team">team2_brother</span>  Thiết kế website <span class="team">TLIT</span> </p>
         </div>
     </footer>
+    <script>
+        ScrollReveal({ 
+            reset: true ,
+            distance:'150px',
+            duration: 1000,
+            delay:400,
+         });
+         ScrollReveal().reveal('.img1', { delay: 400 , origin:'left'});
+         ScrollReveal().reveal('.section1__text ', { delay: 200 , origin:'right'});
+         ScrollReveal().reveal('.img2', { delay: 400 , origin:'right'});
+         ScrollReveal().reveal('.section2__text ', { delay: 200 , origin:'left'});
+         ScrollReveal().reveal('.if__1 ', { delay: 100 , origin:'bottom'});
+         ScrollReveal().reveal('.if__2 ', { delay: 200 , origin:'bottom'});
+         ScrollReveal().reveal('.if__3', { delay: 300 , origin:'bottom'});
+         ScrollReveal().reveal('.if__4', { delay: 400 , origin:'bottom'});
+        
+    </script>
 </body>
 </html>
