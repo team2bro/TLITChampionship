@@ -36,19 +36,19 @@ function opa(){
 }
 //game
 document.querySelector(".level--start .header--home").addEventListener("click",()=>{
-  location.href="../FRUITGAME/index.html";
+  location.href="../FruitGame/index.html";
 })
 document.querySelector(".level--1 .header--home").addEventListener("click",()=>{
-  location.href="../FRUITGAME/index.html";
+  location.href="../FruitGame/index.html";
 })
 document.querySelector(".level--2 .header--home").addEventListener("click",()=>{
-  location.href="../FRUITGAME/index.html";
+  location.href="../FruitGame/index.html";
 })
 document.querySelector(".level--3 .header--home").addEventListener("click",()=>{
-  location.href="../FRUITGAME/index.html";
+  location.href="../FruitGame/index.html";
 })
 document.querySelector(".level--4 .header--home").addEventListener("click",()=>{
-  location.href="../FRUITGAME/index.html";
+  location.href="../FruitGame/index.html";
 })
 document.querySelector(".level--start .header--goback").addEventListener("click", ()=>{
   location.href=".././GAMESHOW_TLIT/index.html";
