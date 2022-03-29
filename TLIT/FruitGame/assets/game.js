@@ -34,7 +34,7 @@ function dataCheckLevel(i) {
     level[i].innerText = dataLevel;
     score[i].innerText = dataScore;
 }
-function check(a, b, c) {
+function check(a, b, c,x,where) {
     var congrat = document.querySelector(".congrat")
     if ((a.toUpperCase() == b) || (a.toUpperCase() == c)) {
         dataScore++
@@ -42,12 +42,15 @@ function check(a, b, c) {
         setTimeout(() => {
             document.querySelector(".tb").remove();
         }, 3000)
+        
+        x.outerHTML =`<button onclick="${where}" class="btn--sub btn--check"><i class="fa-solid fa-check"></i></button>`;
     }
     else {
         congrat.innerHTML = `<img class="tb2" src="./assets/img/cry.gif" alt="">`
         setTimeout(() => {
             document.querySelector(".tb2").remove();
         }, 3000)
+        x.outerHTML =`<button onclick="${where}" class="btn--sub btn--check"><i class="fa-solid fa-xmark"></i></button>`;
     }
     document.querySelector(".answer--form input").classList.add("epointer")
 }
@@ -56,7 +59,10 @@ function nextLevel2() {
     document.querySelector(".level--1").classList.add("close")
     document.querySelector(".level--2").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--1 input").value
-    check(dataAnswer, "BANANAS", "BANANA")
+    var btnLevel=document.querySelector(".level--1 .btn--sub");
+    if (!btnLevel.classList.contains("btn--check")) {
+        check(dataAnswer, "BANANAS", "BANANA",btnLevel,"nextLevel2()")
+    }
     dataLevel=2
     dataCheckLevel(where)
 }
@@ -65,7 +71,10 @@ function nextLevel3() {
     document.querySelector(".level--2").classList.add("close")
     document.querySelector(".level--3").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--2 input").value
-    check(dataAnswer, "ORANGES", "ORANGE")
+    var btnLevel=document.querySelector(".level--2 .btn--sub");
+    if (!btnLevel.classList.contains("btn--check")) {
+        check(dataAnswer, "ORANGES", "ORANGE",btnLevel,"nextLevel3()")
+    }
     dataLevel=3
     dataCheckLevel(where)
 }
@@ -74,7 +83,10 @@ function nextLevel4() {
     document.querySelector(".level--3").classList.add("close")
     document.querySelector(".level--4").classList.remove("game--next__close")
     var dataAnswer = document.querySelector(".level--3 input").value
-    check(dataAnswer, "STRAWBERRYS", "STRAWBERRY")
+    var btnLevel=document.querySelector(".level--3 .btn--sub");
+    if (!btnLevel.classList.contains("btn--check")) {
+        check(dataAnswer, "STRAWBERRYS", "STRAWBERRY",btnLevel,"nextLevel4()")
+    }
     dataLevel=4
     dataCheckLevel(where)
     dataCheckCardFlip(where)

@@ -17,7 +17,19 @@
 </head>
 
 <body>
-    <div class="loadding--layer">
+    <div class="flexModal layer--music">
+        <div class="main--layer">
+            <h3 style="font-size:32px;color:white;">Bạn có muốn phát nhạc trong game?</h3>
+            <div class="flexModal btn--layer">
+                <div class="flexModal btn__layer btn__yes">Có</div>
+                <div class="flexModal btn__layer btn__no">Không</div>
+            </div>
+        </div>
+        <audio loop>
+            <source src="./assets/music.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div class="loadding--layer close">
         <div class="fruits--loadding">
             <div class="fruits">
             </div>
@@ -47,10 +59,12 @@
             <img src="https://i.pinimg.com/originals/28/a7/9c/28a79c0ae2405683bb6fbc5d6e995c60.gif" alt="">
         </div>
     </div>
-
+   
+    
     <!-- -----------------------------------------game----------------------- -->
 
-    <div class="game--start ">
+    <div class="game--start close">
+       
         <div class="congrat">
 
         </div>
@@ -138,7 +152,13 @@
                         <div class="answer--header">
                             Answer
                         </div>
-                        <i class=" setting fa-solid fa-gear"></i>
+                            <i onclick="clickSetting()" class="setting fa-solid fa-gear">
+                                
+                            </i>
+                            <div class="setting--modal close">
+                                
+                            </div>
+
                         <div class="score">
                             <strong>Score: </strong><span class="your--score"></span>
                         </div>
@@ -176,7 +196,10 @@
                         <div class="answer--header">
                             Answer
                         </div>
-                        <i class=" setting fa-solid fa-gear"></i>
+                        <i onclick="clickSetting()" class=" setting fa-solid fa-gear"></i>
+                        <div class="setting--modal close">
+                                
+                        </div>
                         <div class="score">
                             <strong>Score: </strong><span class="your--score"></span>
                         </div>
@@ -214,7 +237,10 @@
                         <div class="answer--header">
                             Answer
                         </div>
-                        <i class=" setting fa-solid fa-gear"></i>
+                        <i onclick="clickSetting()" class=" setting fa-solid fa-gear"></i>
+                        <div class="setting--modal close">
+                                
+                        </div>
                         <div class="score">
                             <strong>Score: </strong><span class="your--score"></span>
                         </div>

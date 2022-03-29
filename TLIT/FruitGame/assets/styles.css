@@ -108,6 +108,61 @@ body {
     z-index: 1000;
     animation:growSun 3s;
 }
+.flexModal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.layer--music{
+    background-color: #011f4b;
+    width: 100vw;
+    height: 100vh;
+}
+.btn__layer{
+    margin-top: 50px;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 25px;
+    font-size:20px;
+    padding:20px 10px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.setting--modal{
+    position: absolute;
+    width:60px;
+    height:70px;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:10px;
+    top:17%;
+    right:8%;
+}
+.music{
+    font-size:25px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+}
+.clear__music{
+    top:45%;
+    right:18%;
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color:black;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.btn__layer:hover{
+    opacity:0.6;
+
+}
+.btn__layer:nth-child(2){
+    margin-left: 100px;
+
+}
 .endloading{
     animation: opLoad 2s forwards;
 }
@@ -255,6 +310,13 @@ button{
 .epointer{
     pointer-events: none;
 }
+.btn--check{
+    width: 100px;
+    color:white;
+}
+.btn--check i{
+    font-size: 17px;
+}
 .btn--sub{
     margin-left: 10px;
     background-color:#00AA00;
@@ -296,11 +358,6 @@ button{
     right:10%;
     font-size:30px;
     cursor: pointer;
-    transform-origin: center;
-}
-.setting:hover{
-    animation:rotate 1s;
-
 }
 .game--level__close{
     display:none;
@@ -433,14 +490,7 @@ button{
         transform:translateX(100%);
     }
 }
-@keyframes  rotate {
-    0%{
-        transform:rotate(0deg);
-    }
-    100%{
-        transform:rotate(360deg);
-    }
-}
+
 @keyframes swing {
     0% { 
         transform: rotate(3deg) ;
