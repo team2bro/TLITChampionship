@@ -21,7 +21,7 @@ function helpBtn(){
 document.querySelector(".help .header--goback").addEventListener("click",()=>{
 helpBtn();
 })
-
+//--------------------------------------
 function play() {
     var gameStart = document.querySelector(".game--start__open")
     var gameLevel = document.querySelector(".game--level__close")
@@ -175,11 +175,12 @@ function checkCard(i,j){
         checkWin();
     }
     else{
+        document.querySelector(".game--card").classList.add("epointer")
         setTimeout(function(){
             upThe(posThe[0])
             upThe(posThe[1])
+            document.querySelector(".game--card").classList.remove("epointer")
         },1000)
-       
     }
 }
 function checkWin(){
