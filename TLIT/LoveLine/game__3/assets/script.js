@@ -8,6 +8,7 @@ document.querySelector(".ico__helper").addEventListener("click", ()=>{
 document.querySelector(".helper--table").addEventListener("click", (e)=>{
     e.stopPropagation();
 })
+
 document.querySelector(".ico__noti").addEventListener("click", ()=>{
     if(document.querySelector(".noti--table").classList.contains("eblock")){
         document.querySelector(".noti--table").classList.remove("eblock")
@@ -15,7 +16,7 @@ document.querySelector(".ico__noti").addEventListener("click", ()=>{
     else 
         document.querySelector(".noti--table").classList.add("eblock")
 })
-document.querySelector(".helper--table").addEventListener("click", (e)=>{
+document.querySelector(".noti--table").addEventListener("click", (e)=>{
     e.stopPropagation();
 })
 const setTheme = theme => document.documentElement.className = theme;
