@@ -13,7 +13,6 @@ document.querySelector(".btn__yes").addEventListener("click", ()=>{
     <div class="clear__music close">
     </div>`
   });
-  document.querySelector(".setting--modal")
   move()
 })
 document.querySelector(".btn__no").addEventListener("click", ()=>{
@@ -26,6 +25,7 @@ document.querySelector(".btn__no").addEventListener("click", ()=>{
     <div class="clear__music">
     </div>`
   });
+  move()
 })
 
 function move() {
