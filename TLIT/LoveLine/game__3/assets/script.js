@@ -170,30 +170,36 @@ function chatting(k){
     })   
 }
 function checkTime(){
-    timeline(".box--base",8,0,0,8)
+    timeline(".box--base",8,0,0,8,3)
 }
-function timeline(k,hour, minute,second,date){
+function timeline(k,hour, minute,second,date,month){
     var today = new Date();
     var timeHours=today.getHours();
     var timeDays = today.getDate();
     var timeMinutes = today.getMinutes();
     var timeSeconds = today.getSeconds();
+    var timeMonths = today.getMonth()+1;
+    var thang=timeMonths-month
     var giay=timeSeconds-second
     var phut=timeMinutes-minute
     var ngay=timeDays-date
     var gio=timeHours-hour
-    if (ngay>0){
-        document.querySelector(k+" .ctime").innerHTML=ngay+" ngày "
+    console.log(thang)
+    if (timeMonths>=1){
+        document.querySelector(k+" .ctime").innerHTML=thang+" tháng "
     }
-    else if (gio>0){
-        document.querySelector(k+" .ctime").innerHTML=gio+" giờ "
+        else if (ngay>0){
+            document.querySelector(k+" .ctime").innerHTML=ngay+" ngày "
         }
-        else if (phut>0){
-            document.querySelector(k+" .ctime").innerHTML=phut+" phút "
-            }
-            else if (phut>0){
-                document.querySelector(k+" .ctime").innerHTML=giay+" giây "
+            else if (gio>0){
+                document.querySelector(k+" .ctime").innerHTML=gio+" giờ "
+        }
+                else if (phut>0){
+                    document.querySelector(k+" .ctime").innerHTML=phut+" phút "
                 }
+                    else if (giay>0){
+                        document.querySelector(k+" .ctime").innerHTML=giay+" giây "
+                    }
 }
 function getStatusAppear(x,y){
     console.log(x)
